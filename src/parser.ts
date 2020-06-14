@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import {AstBuilder} from './astBuilder';
-import {ProcessAST, MapNode} from './processAST';
+import {MapNode, ProcessAST} from './processAST';
 import {Annotation, CheckOutFields, TreeNode} from './annotation';
 import {CommentParser} from './findErrorCase/commentParser';
 import {MochaParser} from './findErrorCase/mochaParser';
@@ -25,11 +25,12 @@ export class Parser {
   }
 
   /**
-   * 处理源文件路径参数, 编码等
+   * 获取原始的解析结果
    * @param {String | String[]} sourceFiles 源文件绝对路径数组
    * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
+   * @return {TreeNode}
    */
-  parse(sourceFiles: string | string[], encoding?: string): void {
+  getOriginalResult(sourceFiles: string | string[], encoding?: string): TreeNode {
     // 设置默认值 utf8
     encoding = encoding || 'utf8';
 
@@ -59,6 +60,17 @@ export class Parser {
         });
       }
     }
+
+    return res;
+  }
+
+  /**
+   * 处理源文件路径参数, 编码等
+   * @param {String | String[]} sourceFiles 源文件绝对路径数组
+   * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
+   */
+  parse(sourceFiles: string | string[], encoding?: string): void {
+    const res: TreeNode = this.getOriginalResult(sourceFiles, encoding);
 
     this.store(`${this.path}/annoation.json`, res);
     console.log('Finished parsing source files.');
