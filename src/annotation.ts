@@ -118,7 +118,8 @@ export class Annotation {
         const matchKey = item.match(/^@[a-zA-Z]*/);
         const matchValue = item.match(/\s.*/);
 
-        if (matchKey !== null && matchValue !== null && this.checkOutFields.has(matchKey[0])) {
+        // 默认将所有的注解都拿出来
+        if (matchKey !== null && matchValue !== null) {
           const key = matchKey[0].replace(/^@/, '');
           const value = matchValue[0].trim();
           if (!res[key]) {

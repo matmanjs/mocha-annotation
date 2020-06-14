@@ -63,6 +63,8 @@ export class Parser {
     this.store(`${this.path}/annoation.json`, res);
     console.log('Finished parsing source files.');
 
+    this.checkComment(res);
+
     if (this.path === '1') {
       this.checkComment(res);
       this.getMochaRes();
