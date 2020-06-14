@@ -5,7 +5,7 @@ import {Annotation, CheckOutFields, TreeNode} from './annotation';
 import {CommentParser} from './findErrorCase/commentParser';
 import {MochaParser} from './findErrorCase/mochaParser';
 
-export class Parse {
+export class Parser {
   private path: string;
   private astBuilder: AstBuilder;
   private processAST: ProcessAST;
@@ -26,38 +26,36 @@ export class Parse {
 
   /**
    * 处理源文件路径参数, 编码等
-   * @param {*} sourceFiles
-   * @param {*} encoding
+   * @param {String | String[]} sourceFiles 源文件绝对路径数组
+   * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
    */
-  parse(sourceFiles: string[], encoding?: string): void {
+  parse(sourceFiles: string | string[], encoding?: string): void {
+    // 设置默认值 utf8
     encoding = encoding || 'utf8';
 
-    const res: TreeNode = {children: []};
-    let filename = '';
-    let sourceCode = '';
-    let sourceFile;
-
+    // sourceFiles 可能为单个文件，将其统一转为数组处理
     if (typeof sourceFiles === 'string') {
       sourceFiles = [sourceFiles];
     }
 
     console.log('Parsing source files: %j', sourceFiles);
 
-    for (let i = 0, l = sourceFiles.length; i < l; i++) {
-      sourceCode = '';
-      sourceFile = sourceFiles[i];
+    const res: TreeNode = {children: []};
 
-      filename = sourceFile;
+    for (let i = 0, l = sourceFiles.length; i < l; i++) {
+      let sourceCode = '';
+      let sourceFile = sourceFiles[i];
+
       try {
-        sourceCode = fs.readFileSync(filename, encoding as 'utf8');
+        sourceCode = fs.readFileSync(sourceFile, encoding as 'utf8');
       } catch (err) {
-        console.error(`Unable to read and parse the source file ${filename}: ${err}`);
+        console.error(`fs.readFileSync catch error!`, sourceFile, err);
       }
 
-      if (sourceCode.length && res.children !== undefined) {
+      if (sourceCode.length && Array.isArray(res.children)) {
         res.children.push({
-          ...this.parseSourceCode(sourceCode, filename),
-          filename,
+          ...this.parseSourceCode(sourceCode, sourceFile),
+          fullFile: sourceFile,
         });
       }
     }
@@ -65,21 +63,23 @@ export class Parse {
     this.store(`${this.path}/annoation.json`, res);
     console.log('Finished parsing source files.');
 
-    this.checkComment(res);
-    this.getMochaRes();
-    this.resByCase();
-    this.resByUser();
+    if (this.path === '1') {
+      this.checkComment(res);
+      this.getMochaRes();
+      this.resByCase();
+      this.resByUser();
+    }
   }
 
   /**
    * 处理单个文件
    * @param {*} sourceCode
-   * @param {*} sourceName
+   * @param {*} sourceFile
    */
-  private parseSourceCode(sourceCode: string, sourceName: string) {
-    console.log(`Parsing ${sourceName} ...`);
+  private parseSourceCode(sourceCode: string, sourceFile: string) {
+    console.log(`Parsing ${sourceFile} ...`);
 
-    const ast = this.astBuilder.build(sourceCode, sourceName);
+    const ast = this.astBuilder.build(sourceCode, sourceFile);
     if (ast) {
       const res = this.processAST.recurse(ast) as Map<string, MapNode>;
       return this.annotation.run(res);

@@ -69,8 +69,8 @@ export class CommentParser extends Parser {
 
       for (const child of item.children) {
         // 挂载必要信息
-        if (item.filename && !child.filename) {
-          child.filename = item.filename;
+        if (item.fullFile && !child.fullFile) {
+          child.fullFile = item.fullFile;
         }
         // 挂载前继节点
         child.parent = item;
@@ -106,7 +106,7 @@ export class CommentParser extends Parser {
       this.fullName = [item.nodeInfo.describe];
       this.getFullTitle(item);
 
-      this.fullNameMap[`${item.filename} ${this.fullName.reverse().join(' ')}`] = {
+      this.fullNameMap[`${item.fullFile} ${this.fullName.reverse().join(' ')}`] = {
         comment,
         nodeInfo: item.nodeInfo,
       };

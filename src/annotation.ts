@@ -15,7 +15,7 @@ export interface TreeNode {
   children?: TreeNode[];
   nodeInfo?: NodeInfo;
   comment?: {[key: string]: Array<any>};
-  filename?: string;
+  fullFile?: string;
 }
 
 export class Annotation {

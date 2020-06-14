@@ -1,3 +1,3 @@
-import {Parse} from './parser';
+import {Parser} from './parser';
 
-export {Parse};
+export {Parser};
