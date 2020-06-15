@@ -100,6 +100,12 @@ export function getParseResult(
   return res;
 }
 
+/**
+ * 获得测试用例的 map
+ *
+ * @param {MochaTestTreeNode} mochaTestTreeNode
+ * @param {string} [fullTitleSep] 名字分隔符，默认是空格间隔
+ */
 export function getTestCaseMap(
   mochaTestTreeNode: MochaTestTreeNode,
   fullTitleSep?: string,
