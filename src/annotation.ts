@@ -1,36 +1,11 @@
 import {MapNode, MineCallExpression} from './processAST';
+import {NodeInfo, MochaTestTreeNode} from './types';
 
 type CheckOutFieldsItem = string | {name: string; require: boolean};
 export type CheckOutFields = string | Array<CheckOutFieldsItem>;
 
-export interface NodeInfo {
-  // 节点描述，即 describe() 和 it() 方法的第一个参数
-  describe: string;
-
-  // 调用者，目前有两个值： describe 和 it
-  callee: string;
-  // loc: any;
-  prelayer: string;
-}
-
-export interface TreeNode {
-  uuid?: string;
-
-  // 子节点
-  children?: TreeNode[];
-
-  // 该节点信息
-  nodeInfo?: NodeInfo;
-
-  // 注解信息
-  comment?: {[key: string]: any};
-
-  // 完整的文件路径
-  fullFile?: string;
-}
-
 export class Annotation {
-  private root: TreeNode;
+  private root: MochaTestTreeNode;
   checkOutFields: Map<string, number>;
 
   /**
@@ -141,7 +116,7 @@ export class Annotation {
     return res;
   };
 
-  private mountNode = (node: TreeNode): void => {
+  private mountNode = (node: MochaTestTreeNode): void => {
     const queue = [this.root];
 
     while (queue.length !== 0) {
@@ -169,7 +144,7 @@ export class Annotation {
    * 得到结果树, 以 root 为根节点
    * @param {*} flatArray
    */
-  run(flatArray: Map<string, MapNode>): TreeNode {
+  run(flatArray: Map<string, MapNode>): MochaTestTreeNode {
     this.clear();
     flatArray.forEach((bodyItem, key) => {
       // 新建虚拟最高层

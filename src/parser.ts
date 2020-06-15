@@ -1,9 +1,18 @@
 import fs from 'fs-extra';
 import {AstBuilder} from './astBuilder';
 import {MapNode, ProcessAST} from './processAST';
-import {Annotation, CheckOutFields, TreeNode} from './annotation';
+import {Annotation, CheckOutFields} from './annotation';
 import {CommentParser} from './findErrorCase/commentParser';
 import {MochaParser} from './findErrorCase/mochaParser';
+import {MochaTestTreeNode} from './types';
+
+interface getParseResultOpts {
+  // 读取文件时需要的文件编码格式，默认为 utf8
+  encoding?: string;
+
+  // 是否启用继承
+  isInherit?: boolean;
+}
 
 export class Parser {
   private path: string;
@@ -28,15 +37,17 @@ export class Parser {
   }
 
   /**
-   * 获取原始的解析结果
+   * 获取解析结果
    *
    * @param {String | String[]} sourceFiles 源文件绝对路径数组
-   * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
-   * @return {TreeNode}
+   * @param {getParseResultOpts} [opts] 读取文件时需要的文件编码格式，默认为 utf8
+   * @param {String} [opts.encoding] 读取文件时需要的文件编码格式，默认为 utf8
+   * @param {Boolean} [opts.isInherit] 是否启用继承注解的方式
+   * @return {MochaTestTreeNode}
    */
-  getOriginalResult(sourceFiles: string | string[], encoding?: string): TreeNode {
+  getParseResult(sourceFiles: string | string[], opts?: getParseResultOpts): MochaTestTreeNode {
     // 设置默认值 utf8
-    encoding = encoding || 'utf8';
+    const encoding = (opts && opts.encoding) || 'utf8';
 
     // sourceFiles 可能为单个文件，将其统一转为数组处理
     if (typeof sourceFiles === 'string') {
@@ -45,7 +56,7 @@ export class Parser {
 
     console.log('Parsing source files: %j', sourceFiles);
 
-    const res: TreeNode = {children: []};
+    const res: MochaTestTreeNode = {children: []};
 
     for (let i = 0, l = sourceFiles.length; i < l; i++) {
       let sourceCode = '';
@@ -63,6 +74,34 @@ export class Parser {
           fullFile: sourceFile,
         });
       }
+    }
+
+    // 若启动继承关系，则还需要额外处理
+    if (opts && opts.isInherit) {
+      function handleInherit(nodeInfo: MochaTestTreeNode) {
+        if (!nodeInfo) {
+          return;
+        }
+
+        if (nodeInfo.children) {
+          nodeInfo.children.forEach(childNodeInfo => {
+            // 设置测试文件的完整路径
+            if (nodeInfo.fullFile && !childNodeInfo.fullFile) {
+              childNodeInfo.fullFile = nodeInfo.fullFile;
+            }
+
+            // 设置父节点的id
+            childNodeInfo.parentId = nodeInfo.uuid;
+
+            // 向上继承注解
+            childNodeInfo.comment = Object.assign({}, nodeInfo.comment, childNodeInfo.comment);
+
+            handleInherit(childNodeInfo);
+          });
+        }
+      }
+
+      handleInherit(res);
     }
 
     return res;
@@ -88,7 +127,7 @@ export class Parser {
    * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
    */
   parse(sourceFiles: string | string[], encoding?: string): void {
-    const res: TreeNode = this.getOriginalResult(sourceFiles, encoding);
+    const res: MochaTestTreeNode = this.getParseResult(sourceFiles);
 
     this.store(`${this.path}/annoation.json`, res);
     console.log('Finished parsing source files.');
@@ -132,7 +171,7 @@ export class Parser {
    * 检查 comment 并得到 名称-comment 映射结果
    * @param {*} res
    */
-  private checkComment(res: TreeNode) {
+  private checkComment(res: MochaTestTreeNode) {
     this.commentParser.parser(JSON.parse(JSON.stringify(res))).check(r => {
       this.commentRes = r;
       this.store(`${this.path}/map.json`, r);

@@ -1,4 +1,4 @@
-import {CommentNode} from './commentParser';
+import {MochaTestTreeNode} from '../types';
 
 /**
  * 基础 parser 类, 读文件
@@ -6,7 +6,7 @@ import {CommentNode} from './commentParser';
 export class Parser {
   path: string;
   encoding: string;
-  nodes: CommentNode[];
+  nodes: MochaTestTreeNode[];
   map: Map<string, {fullTitle: string}>;
 
   constructor(path: string, encoding: 'utf8' = 'utf8') {

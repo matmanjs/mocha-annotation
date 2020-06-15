@@ -18,6 +18,8 @@ const mochewesomeJsonPath =
 
 const parser = new Parser(outputDir);
 
-parser.parse(files);
+// parser.parse(files);
 
 // console.log(JSON.stringify(parser.getOriginalResult(files), null, 2));
+console.log(JSON.stringify(parser.getParseResult(files, {isInherit: true}), null, 2));
+// console.log(parser.getParseResult(files, {isInherit: true}));

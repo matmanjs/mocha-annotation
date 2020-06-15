@@ -1,5 +1,6 @@
 import {Parser} from './parser';
-import {Annotation, TreeNode, NodeInfo} from '../annotation';
+import {Annotation} from '../annotation';
+import {NodeInfo, MochaTestTreeNode} from '../types';
 
 /**
  *
@@ -9,19 +10,11 @@ interface NameMapItem {
   nodeInfo: NodeInfo;
 }
 
-/**
- * 将 TreeNode 拓展出 parent 属性
- */
-export interface CommentNode extends TreeNode {
-  children?: CommentNode[];
-  parent?: CommentNode;
-}
-
 export class CommentParser extends Parser {
   annotation: Annotation;
   fullName: string[];
   fullNameMap: {[key: string]: NameMapItem};
-  source: CommentNode;
+  source: MochaTestTreeNode;
 
   constructor(annotation: Annotation, path = '') {
     super(path);
@@ -34,7 +27,7 @@ export class CommentParser extends Parser {
   /**
    * 得到 fullTitle
    */
-  private getFullTitle = (node: CommentNode): void => {
+  private getFullTitle = (node: MochaTestTreeNode): void => {
     if (node.parent && node.parent.nodeInfo && node.parent.nodeInfo.describe) {
       this.fullName.push(node.parent.nodeInfo.describe);
       this.getFullTitle(node.parent);
@@ -44,7 +37,7 @@ export class CommentParser extends Parser {
   /**
    * 向上寻找 comment
    */
-  private findComment = (node: CommentNode): undefined | {[key: string]: any[]} => {
+  private findComment = (node: MochaTestTreeNode): undefined | {[key: string]: any[]} => {
     if (node.comment) {
       return node.comment;
     }
@@ -56,7 +49,7 @@ export class CommentParser extends Parser {
     return undefined;
   };
 
-  parser(source: CommentNode, func?: (nodes: CommentNode[]) => any): CommentParser {
+  parser(source: MochaTestTreeNode, func?: (nodes: MochaTestTreeNode[]) => any): CommentParser {
     this.source = source;
 
     const queue = [this.source];
@@ -73,7 +66,7 @@ export class CommentParser extends Parser {
           child.fullFile = item.fullFile;
         }
         // 挂载前继节点
-        child.parent = item;
+        // child.parent = item;
 
         if (child.nodeInfo && child.nodeInfo.callee && child.nodeInfo.callee === 'it') {
           this.nodes.push(child);
