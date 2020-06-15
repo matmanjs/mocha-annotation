@@ -114,7 +114,7 @@ export class ProcessAST {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   private Literal = (): void => {
-    console.log();
+    // console.log();
   };
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

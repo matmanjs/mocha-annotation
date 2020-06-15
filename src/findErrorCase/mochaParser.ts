@@ -22,7 +22,7 @@ export class MochaParser extends Parser {
   }
 
   private readFile() {
-    console.log('Parsing source files: %j', this.path);
+    // console.log('Parsing source files: %j', this.path);
 
     let source = '';
     try {

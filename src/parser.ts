@@ -130,7 +130,7 @@ export class Parser {
     const res: MochaTestTreeNode = this.getParseResult(sourceFiles);
 
     this.store(`${this.path}/annoation.json`, res);
-    console.log('Finished parsing source files.');
+    // console.log('Finished parsing source files.');
 
     this.checkComment(res);
 
