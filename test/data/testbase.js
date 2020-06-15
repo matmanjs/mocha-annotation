@@ -1,11 +1,12 @@
 const path = require('path');
-const {getParseResult, getTestCaseMap} = require('../../');
+const {getParseResult, getTestCaseMap, getTestResultMap} = require('../../');
 const fse = require('fs-extra');
 const yaml = require('js-yaml');
 
 let testFiles = [];
 // const PROJECT_ROOT = process.cwd();
 const PROJECT_ROOT = path.join(__dirname, '.test_output');
+const OUTPUT_PATH = path.join(__dirname, '.test_output');
 
 // https://mochajs.org/#available-root-hooks
 exports.mochaHooks = {
@@ -19,8 +20,12 @@ exports.mochaHooks = {
     console.log(PROJECT_ROOT);
     console.log(testFiles);
 
-    const testCaseMap = getTestCaseMap(getParseResult(testFiles, {isInherit: true}), '#');
-    console.log(testCaseMap);
+    const mochaTestTreeNode = getParseResult(testFiles, {isInherit: true});
+    // console.log(mochaTestTreeNode);
+    fse.outputJsonSync(path.join(PROJECT_ROOT, 'mocha-test-tree-node.json'), mochaTestTreeNode);
+
+    const testCaseMap = getTestCaseMap(mochaTestTreeNode, '#');
+    // console.log(testCaseMap);
     fse.outputJsonSync(path.join(PROJECT_ROOT, 'test-case-map.json'), testCaseMap);
 
     const dwtCases = {};
@@ -39,7 +44,7 @@ exports.mochaHooks = {
 
       dwtCases[fullTitle] = {...caseItem, ...treeNode.comment};
     });
-    console.log(dwtCases);
+    // console.log(dwtCases);
     fse.outputJsonSync(path.join(PROJECT_ROOT, 'dwt-cases.json'), dwtCases);
 
     try {
@@ -54,6 +59,15 @@ exports.mochaHooks = {
     } catch (e) {
       console.error(e);
     }
+
+    setTimeout(() => {
+      const testResultMap = getTestResultMap(
+        mochaTestTreeNode,
+        path.join(OUTPUT_PATH, './mochawesome.json'),
+      );
+      // console.log(testResultMap);
+      fse.outputJsonSync(path.join(PROJECT_ROOT, 'test-result-map.json'), testResultMap);
+    }, 500);
   },
 
   async afterEach() {
