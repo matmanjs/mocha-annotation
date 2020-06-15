@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import _ from 'lodash';
-import {MochaTestTreeNode} from './types';
+import {MochaTestTreeNode, TestCaseMap} from './types';
 import {MapNode, ProcessAST} from './processAST';
 import {AstBuilder} from './astBuilder';
 import {Annotation} from './annotation';
@@ -11,10 +11,6 @@ interface GetParseResultOpts {
 
   // 是否启用继承注解的方式
   isInherit?: boolean;
-}
-
-interface TestCaseMap {
-  [key: string]: MochaTestTreeNode;
 }
 
 /**
@@ -114,14 +110,14 @@ export function getTestCaseMap(
       return;
     }
 
-    if (treeNode.fullTitle) {
-      treeNode.fullTitle = treeNode.fullFile;
-    } else if (parentFullTitle) {
+    if (parentFullTitle) {
       treeNode.fullTitle = [parentFullTitle, treeNode.nodeInfo && treeNode.nodeInfo.describe].join(
         fullTitleSep || ' ',
       );
 
       map[treeNode.fullTitle] = treeNode;
+    } else {
+      treeNode.fullTitle = treeNode.fullFile;
     }
 
     if (treeNode.children) {

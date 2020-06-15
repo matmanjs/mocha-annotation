@@ -65,3 +65,7 @@ export interface MochaTestTreeNode {
   // 测试结果的详细信息，从 mochawesome 获得
   results?: MochaSource[];
 }
+
+export interface TestCaseMap {
+  [key: string]: MochaTestTreeNode;
+}
