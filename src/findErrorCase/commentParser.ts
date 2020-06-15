@@ -5,7 +5,7 @@ import {Annotation, TreeNode, NodeInfo} from '../annotation';
  *
  */
 interface NameMapItem {
-  comment: {[key: string]: any[]};
+  comment: {[key: string]: any};
   nodeInfo: NodeInfo;
 }
 

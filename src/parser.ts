@@ -21,11 +21,15 @@ export class Parser {
     this.processAST = new ProcessAST();
     this.annotation = new Annotation(e);
     this.commentParser = new CommentParser(this.annotation);
-    this.mochaParser = new MochaParser(`${path}/mochawesome.json`);
+    // this.mochaParser = new MochaParser(`${path}/mochawesome.json`);
+    this.mochaParser = new MochaParser(
+      '/Users/helinjiang/gitprojects/mocha-annotation/test/data/.test_output/mochawesome.json',
+    );
   }
 
   /**
    * 获取原始的解析结果
+   *
    * @param {String | String[]} sourceFiles 源文件绝对路径数组
    * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
    * @return {TreeNode}
@@ -65,6 +69,20 @@ export class Parser {
   }
 
   /**
+   * 检查 comment 并得到 名称-comment 映射结果
+   * @param {*} res
+   */
+  // private getCommentMap(res: TreeNode) {
+  //   const commentParser = new CommentParser(this.annotation)
+  //
+  //
+  //   this.commentParser.parser(JSON.parse(JSON.stringify(res))).check(r => {
+  //     this.commentRes = r;
+  //     this.store(`${this.path}/map.json`, r);
+  //   });
+  // }
+
+  /**
    * 处理源文件路径参数, 编码等
    * @param {String | String[]} sourceFiles 源文件绝对路径数组
    * @param {String} [encoding] 读取文件时需要的文件编码格式，默认为 utf8
@@ -77,12 +95,11 @@ export class Parser {
 
     this.checkComment(res);
 
-    if (this.path === '1') {
-      this.checkComment(res);
-      this.getMochaRes();
-      this.resByCase();
-      this.resByUser();
-    }
+    // if (this.path === '1') {
+    this.getMochaRes();
+    this.resByCase();
+    this.resByUser();
+    // }
   }
 
   /**
@@ -153,7 +170,7 @@ export class Parser {
     const resByUser: {[key: string]: any} = {};
 
     for (const item of Object.keys(this.commentRes)) {
-      const author = this.commentRes[item].comment.author.join('');
+      const author = this.commentRes[item].comment.author;
       if (resByUser[author] === undefined) {
         resByUser[author] = [];
       }

@@ -9,7 +9,7 @@ export interface NodeInfo {
 
   // 调用者，目前有两个值： describe 和 it
   callee: string;
-  loc: any;
+  // loc: any;
   prelayer: string;
 }
 
@@ -23,7 +23,7 @@ export interface TreeNode {
   nodeInfo?: NodeInfo;
 
   // 注解信息
-  comment?: {[key: string]: Array<any>};
+  comment?: {[key: string]: any};
 
   // 完整的文件路径
   fullFile?: string;
@@ -93,7 +93,7 @@ export class Annotation {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       describe: node.arguments[0].value,
-      loc: node.loc,
+      // loc: node.loc,
       callee,
       prelayer: node.prelayer,
     };
@@ -109,7 +109,7 @@ export class Annotation {
     }
 
     let raw = '';
-    const res: {[key: string]: Array<any>} = {};
+    const res: {[key: string]: any} = {};
 
     for (const commentItem of node.leadingComments) {
       if (commentItem.type === 'CommentBlock') {
@@ -133,11 +133,8 @@ export class Annotation {
         if (matchKey !== null && matchValue !== null) {
           const key = matchKey[0].replace(/^@/, '');
           const value = matchValue[0].trim();
-          if (!res[key]) {
-            res[key] = [];
-          }
 
-          res[key].push(value);
+          res[key] = value;
         }
       });
 
