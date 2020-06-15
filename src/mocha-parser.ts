@@ -68,33 +68,34 @@ export function getParseResult(
     }
   }
 
-  // 若启动继承关系，则还需要额外处理
-  if (opts && opts.isInherit) {
-    function handleInherit(treeNode: MochaTestTreeNode) {
-      if (!treeNode) {
-        return;
-      }
-
-      if (treeNode.children) {
-        treeNode.children.forEach(childNodeInfo => {
-          // 设置测试文件的完整路径
-          if (treeNode.fullFile && !childNodeInfo.fullFile) {
-            childNodeInfo.fullFile = treeNode.fullFile;
-          }
-
-          // 设置父节点的id
-          childNodeInfo.parentId = treeNode.uuid;
-
-          // 向上继承注解
-          childNodeInfo.comment = Object.assign({}, treeNode.comment, childNodeInfo.comment);
-
-          handleInherit(childNodeInfo);
-        });
-      }
+  // 遍历一遍，必要时做一些继承处理
+  function search(treeNode: MochaTestTreeNode): void {
+    if (!treeNode) {
+      return;
     }
 
-    handleInherit(res);
+    if (treeNode.children) {
+      treeNode.children.forEach(childNodeInfo => {
+        // 设置测试文件的完整路径
+        if (treeNode.fullFile && !childNodeInfo.fullFile) {
+          childNodeInfo.fullFile = treeNode.fullFile;
+        }
+
+        // 设置父节点的id
+        childNodeInfo.parentId = treeNode.uuid;
+
+        // 若启动继承关系，则还需要额外处理
+        if (opts && opts.isInherit) {
+          // 向上继承注解
+          childNodeInfo.comment = Object.assign({}, treeNode.comment, childNodeInfo.comment);
+        }
+
+        search(childNodeInfo);
+      });
+    }
   }
+
+  search(res);
 
   return res;
 }
@@ -119,6 +120,8 @@ export function getTestCaseMap(
     } else {
       treeNode.fullTitle = treeNode.fullFile;
     }
+
+    // console.log('==', treeNode.fullFile);
 
     if (treeNode.children) {
       treeNode.children.forEach(childNodeInfo => {

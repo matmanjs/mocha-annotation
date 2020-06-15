@@ -11,7 +11,8 @@
     "test:cover": "nyc npm run test:unit",
     "lint": "eslint src test --ext .ts",
     "debug-mocha-examples": "mocha test/data/mocha-examples --recursive",
-    "debug": "mocha test/data/mocha-examples --recursive --require test/data/test-hooks.js --reporter mochawesome --reporter-options reportDir=test/data/.test_output"
+    "debug": "mocha test/data/mocha-examples --recursive --require test/data/testbase.js --reporter mochawesome --reporter-options reportDir=test/data/.test_output",
+    "debug2": "mocha test/data/mocha-examples --recursive --require test/data/test-hooks.js --reporter mochawesome --reporter-options reportDir=test/data/.test_output"
   },
   "repository": {
     "type": "git",
