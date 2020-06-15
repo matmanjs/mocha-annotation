@@ -54,7 +54,7 @@ export class Parser {
       sourceFiles = [sourceFiles];
     }
 
-    console.log('Parsing source files: %j', sourceFiles);
+    // console.log('Parsing source files:', sourceFiles);
 
     const res: MochaTestTreeNode = {children: []};
 
@@ -147,7 +147,7 @@ export class Parser {
    * @param {*} sourceFile
    */
   private parseSourceCode(sourceCode: string, sourceFile: string) {
-    console.log(`Parsing ${sourceFile} ...`);
+    // console.log(`Parsing ${sourceFile} ...`);
 
     const ast = this.astBuilder.build(sourceCode, sourceFile);
     if (ast) {

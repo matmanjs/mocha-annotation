@@ -28,9 +28,9 @@ export type MapNode = MineCallExpression | VirtualLayer;
  * @param {*} param0
  */
 function logUnknownNodeType(node: MineNode) {
-  console.log(
-    `Found a node with unrecognized type ${node.type}. Ignoring the node and its ` + 'descendants.',
-  );
+  // console.log(
+  //   `Found a node with unrecognized type ${node.type}. Ignoring the node and its ` + 'descendants.',
+  // );
 }
 
 /**
