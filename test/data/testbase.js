@@ -2,6 +2,7 @@ const path = require('path');
 const {getParseResult, getTestCaseMap, getTestResultMap} = require('../../');
 const fse = require('fs-extra');
 const yaml = require('js-yaml');
+const {toXML} = require('jstoxml');
 
 let testFiles = [];
 // const PROJECT_ROOT = process.cwd();
@@ -67,6 +68,70 @@ exports.mochaHooks = {
       );
       // console.log(testResultMap);
       fse.outputJsonSync(path.join(PROJECT_ROOT, 'test-result-map.json'), testResultMap);
+
+      const dwtJunit = [];
+      Object.keys(testResultMap).forEach(fullTitle => {
+        const treeNode = testResultMap[fullTitle];
+
+        if (!treeNode || !treeNode.result) {
+          return;
+        }
+
+        // https://iwiki.oa.tencent.com/pages/viewpage.action?pageId=178300630
+        dwtJunit.push({
+          testcase: {
+            _attrs: {
+              //用例执行结果，0不通过，1通过
+              CaseResult: treeNode.result.state === 'passed' ? 1 : 0,
+              CaseManager: treeNode.comment.author,
+              // 用例类型，e2e的枚举值是1，integartion的枚举值是4，unit是5
+              CaseType: '5',
+
+              // describe
+              CaseDesc: treeNode.result.fullTitle.replace(
+                new RegExp(treeNode.result.title, 'gi'),
+                '',
+              ),
+
+              // describe
+              ClassName: treeNode.result.fullTitle.replace(
+                new RegExp(treeNode.result.title, 'gi'),
+                '',
+              ),
+
+              // 先默认chrome
+              DeviceID: 'chrome',
+
+              // 执行时间（毫秒）
+              ExecuteTime: treeNode.result.duration || 0,
+
+              //it/test
+              MethodName: treeNode.nodeInfo.describe,
+
+              // 空
+              FtName: '',
+
+              //从根目录开始的文件路径
+              ModuleName: treeNode.fullFile,
+
+              // 错误堆栈
+              StackTrace: '',
+            },
+          },
+        });
+      });
+      // console.log(dwtJunit);
+      fse.outputJsonSync(path.join(PROJECT_ROOT, 'dwt-junit.json'), dwtJunit);
+
+      fse.outputFileSync(
+        path.join(PROJECT_ROOT, 'dwt-junit.xml'),
+        `<?xml version="1.0" encoding="UTF-8"?>\n${toXML({
+          testsuites: {
+            testsuite: dwtJunit,
+          },
+        })}`,
+        'utf-8',
+      );
     }, 500);
   },
 
