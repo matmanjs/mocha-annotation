@@ -33,6 +33,16 @@ export interface MochaSource {
   suites: MochaSource[];
 }
 
+export interface MochawesomeSuiteTest {
+  fullTitle: string;
+}
+
+export interface MochawesomeSuite {
+  fullFile: string;
+  tests: MochawesomeSuiteTest[];
+  suites: MochawesomeSuite[];
+}
+
 /**
  * 测试用例
  */
@@ -63,9 +73,13 @@ export interface MochaTestTreeNode {
   status?: ['success' | 'fail'];
 
   // 测试结果的详细信息，从 mochawesome 获得
-  results?: MochaSource[];
+  result?: MochawesomeSuiteTest;
 }
 
 export interface TestCaseMap {
+  [key: string]: MochaTestTreeNode;
+}
+
+export interface TestResultMap {
   [key: string]: MochaTestTreeNode;
 }

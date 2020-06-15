@@ -441,9 +441,11 @@ const mochaTestTreeNode = {
   ],
 };
 
-const {get} = require('../lib');
+const {getTestResultMap} = require('../lib');
 
-const testCaseMap = getTestCaseMap(mochaTestTreeNode, '#');
+const testResultMap = getTestResultMap(
+  mochaTestTreeNode,
+  '/Users/helinjiang/gitprojects/mocha-annotation/test/data/.test_output/mochawesome.json',
+);
 
-// console.log(JSON.stringify(testCaseMap, null, 2));
-console.log(Object.keys(testCaseMap));
+console.log(JSON.stringify(testResultMap, null, 2));

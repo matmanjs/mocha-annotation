@@ -1,6 +1,6 @@
-import fs from 'fs-extra';
+import fse from 'fs-extra';
 import _ from 'lodash';
-import {MochaTestTreeNode, TestCaseMap} from './types';
+import {MochaTestTreeNode, TestCaseMap, TestResultMap, MochawesomeSuite} from './types';
 import {MapNode, ProcessAST} from './processAST';
 import {AstBuilder} from './astBuilder';
 import {Annotation} from './annotation';
@@ -47,7 +47,7 @@ export function getParseResult(
     let sourceFile = sourceFiles[i];
 
     try {
-      sourceCode = fs.readFileSync(sourceFile, encoding as 'utf8');
+      sourceCode = fse.readFileSync(sourceFile, encoding as 'utf8');
     } catch (err) {
       console.error(`fs.readFileSync catch error!`, sourceFile, err);
     }
@@ -137,6 +137,50 @@ export function getTestCaseMap(
   }
 
   search(mochaTestTreeNode);
+
+  return map;
+}
+
+/**
+ * 获得测试用例的 map
+ *
+ * @param {MochaTestTreeNode} mochaTestTreeNode
+ * @param {string} mochawesomeJsonFile mochawesome.json 文件的绝对路径
+ */
+export function getTestResultMap(
+  mochaTestTreeNode: MochaTestTreeNode,
+  mochawesomeJsonFile: string,
+): TestResultMap {
+  const map: TestResultMap = {};
+
+  const testCaseMap = getTestCaseMap(mochaTestTreeNode);
+
+  const mochawesomeJson = fse.readJSONSync(mochawesomeJsonFile);
+
+  function search(suites: MochawesomeSuite[]) {
+    if (!suites) {
+      return;
+    }
+
+    suites.forEach(suite => {
+      if (suite.tests && suite.tests.length) {
+        suite.tests.forEach(suiteTest => {
+          const curFullTitle = `${suite.fullFile} ${suiteTest.fullTitle}`;
+          if (testCaseMap[curFullTitle]) {
+            testCaseMap[curFullTitle].result = suiteTest;
+          }
+
+          map[curFullTitle] = testCaseMap[curFullTitle];
+        });
+      }
+
+      if (suite.suites && suite.suites.length) {
+        search(suite.suites);
+      }
+    });
+  }
+
+  search(mochawesomeJson.results);
 
   return map;
 }
