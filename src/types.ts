@@ -41,6 +41,7 @@ export interface MochaTestTreeNode {
 
   // 父节点 id
   parentId?: string;
+
   parent?: MochaTestTreeNode;
 
   // 子节点们
@@ -51,6 +52,9 @@ export interface MochaTestTreeNode {
 
   // 注解信息
   comment?: {[key: string]: any};
+
+  // 完整的文件名
+  fullTitle?: string;
 
   // 完整的文件路径
   fullFile?: string;

@@ -140,4 +140,38 @@ function findByTestId(mochaTestTreeNode, testId) {
   return result;
 }
 
-console.log(findByTestId(a, 'one-describe-one-it:describe1:it1'));
+// console.log(findByTestId(a, 'one-describe-one-it:describe1:it1'));
+
+function getTestCaseMap(mochaTestTreeNode, fullTitleSep) {
+  const map = {};
+
+  function search(treeNode, parentFullTitle) {
+    if (!treeNode) {
+      return;
+    }
+
+    if (!treeNode.parentId) {
+      treeNode.fullTitle = treeNode.fullFile;
+    } else if (parentFullTitle) {
+      treeNode.fullTitle = [parentFullTitle, treeNode.nodeInfo && treeNode.nodeInfo.describe].join(
+        fullTitleSep,
+      );
+
+      map[treeNode.fullTitle] = treeNode;
+
+      console.log(treeNode.fullTitle);
+    }
+
+    if (treeNode.children) {
+      treeNode.children.forEach(childNodeInfo => {
+        search(childNodeInfo, treeNode.fullTitle);
+      });
+    }
+  }
+
+  search(mochaTestTreeNode);
+
+  return map;
+}
+
+console.log(getTestCaseMap(a, '#'));

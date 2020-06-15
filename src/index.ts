@@ -1,4 +1,4 @@
 import {Parser} from './parser';
-import {getParseResult} from './mocha-parser';
+import {getParseResult, getTestCaseMap} from './mocha-parser';
 
-export {Parser, getParseResult};
+export {Parser, getParseResult, getTestCaseMap};

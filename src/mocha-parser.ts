@@ -5,7 +5,7 @@ import {MapNode, ProcessAST} from './processAST';
 import {AstBuilder} from './astBuilder';
 import {Annotation} from './annotation';
 
-interface getParseResultOpts {
+interface GetParseResultOpts {
   // 读取文件时需要的文件编码格式，默认为 utf8
   encoding?: string;
 
@@ -13,18 +13,22 @@ interface getParseResultOpts {
   isInherit?: boolean;
 }
 
+interface TestCaseMap {
+  [key: string]: MochaTestTreeNode;
+}
+
 /**
  * 获取解析结果
  *
  * @param {String | String[]} sourceFiles 源文件绝对路径数组
- * @param {getParseResultOpts} [opts] 读取文件时需要的文件编码格式，默认为 utf8
+ * @param {GetParseResultOpts} [opts] 读取文件时需要的文件编码格式，默认为 utf8
  * @param {String} [opts.encoding] 读取文件时需要的文件编码格式，默认为 utf8
  * @param {Boolean} [opts.isInherit] 是否启用继承注解的方式
  * @return {MochaTestTreeNode}
  */
 export function getParseResult(
   sourceFiles: string | string[],
-  opts?: getParseResultOpts,
+  opts?: GetParseResultOpts,
 ): MochaTestTreeNode {
   // 设置默认值 utf8
   const encoding = (opts && opts.encoding) || 'utf8';
@@ -70,23 +74,23 @@ export function getParseResult(
 
   // 若启动继承关系，则还需要额外处理
   if (opts && opts.isInherit) {
-    function handleInherit(nodeInfo: MochaTestTreeNode) {
-      if (!nodeInfo) {
+    function handleInherit(treeNode: MochaTestTreeNode) {
+      if (!treeNode) {
         return;
       }
 
-      if (nodeInfo.children) {
-        nodeInfo.children.forEach(childNodeInfo => {
+      if (treeNode.children) {
+        treeNode.children.forEach(childNodeInfo => {
           // 设置测试文件的完整路径
-          if (nodeInfo.fullFile && !childNodeInfo.fullFile) {
-            childNodeInfo.fullFile = nodeInfo.fullFile;
+          if (treeNode.fullFile && !childNodeInfo.fullFile) {
+            childNodeInfo.fullFile = treeNode.fullFile;
           }
 
           // 设置父节点的id
-          childNodeInfo.parentId = nodeInfo.uuid;
+          childNodeInfo.parentId = treeNode.uuid;
 
           // 向上继承注解
-          childNodeInfo.comment = Object.assign({}, nodeInfo.comment, childNodeInfo.comment);
+          childNodeInfo.comment = Object.assign({}, treeNode.comment, childNodeInfo.comment);
 
           handleInherit(childNodeInfo);
         });
@@ -97,4 +101,37 @@ export function getParseResult(
   }
 
   return res;
+}
+
+export function getTestCaseMap(
+  mochaTestTreeNode: MochaTestTreeNode,
+  fullTitleSep?: string,
+): TestCaseMap {
+  const map: TestCaseMap = {};
+
+  function search(treeNode: MochaTestTreeNode, parentFullTitle?: string) {
+    if (!treeNode) {
+      return;
+    }
+
+    if (treeNode.fullTitle) {
+      treeNode.fullTitle = treeNode.fullFile;
+    } else if (parentFullTitle) {
+      treeNode.fullTitle = [parentFullTitle, treeNode.nodeInfo && treeNode.nodeInfo.describe].join(
+        fullTitleSep || ' ',
+      );
+
+      map[treeNode.fullTitle] = treeNode;
+    }
+
+    if (treeNode.children) {
+      treeNode.children.forEach(childNodeInfo => {
+        search(childNodeInfo, treeNode.fullTitle);
+      });
+    }
+  }
+
+  search(mochaTestTreeNode);
+
+  return map;
 }
