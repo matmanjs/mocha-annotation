@@ -1,6 +1,7 @@
 const path = require('path');
 const {getParseResult, getTestCaseMap} = require('../../');
 const fse = require('fs-extra');
+const yaml = require('js-yaml');
 
 let testFiles = [];
 // const PROJECT_ROOT = process.cwd();
@@ -40,6 +41,19 @@ exports.mochaHooks = {
     });
     console.log(dwtCases);
     fse.outputJsonSync(path.join(PROJECT_ROOT, 'dwt-cases.json'), dwtCases);
+
+    try {
+      const doc = yaml.safeDump(dwtCases, {
+        styles: {
+          '!!null': 'canonical', // dump null as ~
+        },
+        sortKeys: true, // sort object keys
+      });
+
+      fse.outputFileSync(path.join(PROJECT_ROOT, 'dwt-cases.yml'), doc, 'utf-8');
+    } catch (e) {
+      console.error(e);
+    }
   },
 
   async afterEach() {
