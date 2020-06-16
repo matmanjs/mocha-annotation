@@ -94,22 +94,22 @@ export class ProcessAST {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  private CallExpression = (node: MineCallExpression, parent: MineNode, uuid: string): void => {
-    let temp = uuid;
-    if (checkCallExpression(node)) {
-      node.prelayer = uuid;
-      temp = uuidv4();
-      this.map.set(temp, node);
-    }
-
-    this.cb(node.callee, node, temp);
-
-    if (node.arguments) {
-      for (const arg of node.arguments) {
-        this.cb(arg, node, temp);
-      }
-    }
-  };
+  // private CallExpression = (node: MineCallExpression, parent: MineNode, uuid: string): void => {
+  //   let temp = uuid;
+  //   if (checkCallExpression(node)) {
+  //     node.prelayer = uuid;
+  //     temp = uuidv4();
+  //     this.map.set(temp, node);
+  //   }
+  //
+  //   this.cb(node.callee, node, temp);
+  //
+  //   if (node.arguments) {
+  //     for (const arg of node.arguments) {
+  //       this.cb(arg, node, temp);
+  //     }
+  //   }
+  // };
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
