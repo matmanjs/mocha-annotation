@@ -38,6 +38,11 @@ export interface MochawesomeSuiteTest {
   fullTitle: string;
   state: string;
   duration: number;
+  err: {
+    message?: string;
+    estack?: string;
+    diff?: string;
+  };
 }
 
 export interface MochawesomeSuite {
