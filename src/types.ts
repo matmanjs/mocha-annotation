@@ -34,7 +34,10 @@ export interface MochaSource {
 }
 
 export interface MochawesomeSuiteTest {
+  title: string;
   fullTitle: string;
+  state: string;
+  duration: number;
 }
 
 export interface MochawesomeSuite {
