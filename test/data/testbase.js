@@ -9,4 +9,9 @@ exports.mochaHooks = createMochaHooks(outputPath, {
   mochawesomeJsonFilePath,
   isSaveTmpFiles: true,
   isDebug: true,
+  defaultComment: {
+    author: 'goodboy',
+    priority: 'P0',
+    type: 'unit',
+  },
 });

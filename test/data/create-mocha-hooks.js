@@ -16,6 +16,7 @@ let testFiles = [];
  * @param {String} [opts.mochawesomeJsonFilePath] mochawesome.json 文件绝对路径
  * @param {Boolean} [opts.isDebug] 是否启动调试模式
  * @param {Boolean} [opts.isSaveTmpFiles] 是否保存中间产物
+ * @param {Object} [opts.defaultComment] 默认要附加的注解
  * @return {Object}
  */
 module.exports = (outputPath, opts = {}) => {
@@ -59,14 +60,14 @@ module.exports = (outputPath, opts = {}) => {
           return;
         }
 
-        const caseItem = {
+        const caseItem = Object.assign({}, opts.defaultComment, treeNode.comment, {
           describe: treeNode.nodeInfo.describe,
           case: treeNode.nodeInfo.describe,
           moduleName: treeNode.fullFile,
-        };
+        });
 
         // TODO 强制开启检查几个必选字段不能缺失
-        dwtCases[fullTitle] = {...caseItem, ...treeNode.comment};
+        dwtCases[fullTitle] = caseItem;
       });
       if (opts.isSaveTmpFiles) {
         // console.log(dwtCases);
@@ -127,16 +128,10 @@ module.exports = (outputPath, opts = {}) => {
                 CaseType: '5',
 
                 // describe
-                CaseDesc: treeNode.result.fullTitle.replace(
-                  new RegExp(treeNode.result.title, 'gi'),
-                  '',
-                ),
+                CaseDesc: treeNode.result.fullTitle.split(treeNode.result.title).join(''),
 
                 // describe
-                ClassName: treeNode.result.fullTitle.replace(
-                  new RegExp(treeNode.result.title, 'gi'),
-                  '',
-                ),
+                ClassName: treeNode.result.fullTitle.split(treeNode.result.title).join(''),
 
                 // 先默认chrome
                 DeviceID: 'chrome',
