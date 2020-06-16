@@ -1,6 +1,12 @@
 import fse from 'fs-extra';
 import _ from 'lodash';
-import {MochaTestTreeNode, TestCaseMap, TestResultMap, MochawesomeSuite} from './types';
+import {
+  MochaTestTreeNode,
+  TestCaseMap,
+  TestResultMap,
+  MochawesomeSuite,
+  MochawesomeSuiteTest,
+} from './types';
 import {MapNode, ProcessAST} from './processAST';
 import {AstBuilder} from './astBuilder';
 import {Annotation} from './annotation';
@@ -167,7 +173,7 @@ export function getTestResultMap(
         suite.tests.forEach(suiteTest => {
           const curFullTitle = `${suite.fullFile} ${suiteTest.fullTitle}`;
           if (testCaseMap[curFullTitle]) {
-            testCaseMap[curFullTitle].result = suiteTest;
+            testCaseMap[curFullTitle].result = suiteTest as MochawesomeSuiteTest;
           }
 
           map[curFullTitle] = testCaseMap[curFullTitle];
