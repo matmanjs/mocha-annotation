@@ -20,12 +20,14 @@ let testFiles = [];
  */
 module.exports = (outputPath, opts = {}) => {
   return {
-    async beforeAll() {
+    beforeAll(done) {
       // 初始清理
       testFiles = [];
+
+      done();
     },
 
-    async afterAll() {
+    afterAll(done) {
       // 最后的处理
       if (opts.isDebug) {
         console.log('outputPath:', outputPath);
@@ -88,99 +90,104 @@ module.exports = (outputPath, opts = {}) => {
       // 如果没有设置 opts.mochawesomeJsonFilePath，则后续不再处理
       if (!opts.mochawesomeJsonFilePath) {
         console.error('opts.mochawesomeJsonFilePath is unknown!', opts.mochawesomeJsonFilePath);
+        done();
         return;
       }
 
       // 注意此处要等待 mochawesome.json 生成
-      await checkAndWaitFileAvailable(opts.mochawesomeJsonFilePath, {timeout: 100});
-
-      // 获取测试结果 map
-      const testResultMap = getTestResultMap(mochaTestTreeNode, opts.mochawesomeJsonFilePath);
-      if (opts.isSaveTmpFiles) {
-        // console.log(testResultMap);
-        fse.outputJsonSync(path.join(outputPath, 'test-result-map.json'), testResultMap);
-      }
-
-      // 获取测试报告： dwt-junit.xml
-      // https://iwiki.oa.tencent.com/pages/viewpage.action?pageId=178300630
-      const dwtJunit = [];
-      Object.keys(testResultMap).forEach(fullTitle => {
-        const treeNode = testResultMap[fullTitle];
-
-        if (!treeNode || !treeNode.result) {
-          // TODO 循环产生的 it 模块会进入此逻辑，需要再仔细考虑
-          console.error('--not exist result--', fullTitle, treeNode);
-          return;
+      checkAndWaitFileAvailable(opts.mochawesomeJsonFilePath, {timeout: 100}).then(() => {
+        // 获取测试结果 map
+        const testResultMap = getTestResultMap(mochaTestTreeNode, opts.mochawesomeJsonFilePath);
+        if (opts.isSaveTmpFiles) {
+          // console.log(testResultMap);
+          fse.outputJsonSync(path.join(outputPath, 'test-result-map.json'), testResultMap);
         }
 
-        dwtJunit.push({
-          testcase: {
-            _attrs: {
-              // 用例执行结果，0不通过，1通过
-              CaseResult: treeNode.result.state === 'passed' ? 1 : 0,
+        // 获取测试报告： dwt-junit.xml
+        // https://iwiki.oa.tencent.com/pages/viewpage.action?pageId=178300630
+        const dwtJunit = [];
+        Object.keys(testResultMap).forEach(fullTitle => {
+          const treeNode = testResultMap[fullTitle];
 
-              // 用例owner
-              CaseManager: treeNode.comment.author,
-              // 用例类型，e2e的枚举值是1，integartion的枚举值是4，unit是5
-              CaseType: '5',
+          if (!treeNode || !treeNode.result) {
+            // TODO 循环产生的 it 模块会进入此逻辑，需要再仔细考虑
+            // console.error('--not exist result--', fullTitle, treeNode);
+            return;
+          }
 
-              // describe
-              CaseDesc: treeNode.result.fullTitle.replace(
-                new RegExp(treeNode.result.title, 'gi'),
-                '',
-              ),
+          dwtJunit.push({
+            testcase: {
+              _attrs: {
+                // 用例执行结果，0不通过，1通过
+                CaseResult: treeNode.result.state === 'passed' ? 1 : 0,
 
-              // describe
-              ClassName: treeNode.result.fullTitle.replace(
-                new RegExp(treeNode.result.title, 'gi'),
-                '',
-              ),
+                // 用例owner
+                CaseManager: treeNode.comment.author,
+                // 用例类型，e2e的枚举值是1，integartion的枚举值是4，unit是5
+                CaseType: '5',
 
-              // 先默认chrome
-              DeviceID: 'chrome',
+                // describe
+                CaseDesc: treeNode.result.fullTitle.replace(
+                  new RegExp(treeNode.result.title, 'gi'),
+                  '',
+                ),
 
-              // 执行时间（毫秒）
-              ExecuteTime: treeNode.result.duration || 0,
+                // describe
+                ClassName: treeNode.result.fullTitle.replace(
+                  new RegExp(treeNode.result.title, 'gi'),
+                  '',
+                ),
 
-              //it/test
-              MethodName: treeNode.nodeInfo.describe,
+                // 先默认chrome
+                DeviceID: 'chrome',
 
-              // 空
-              FtName: '',
+                // 执行时间（毫秒）
+                ExecuteTime: treeNode.result.duration || 0,
 
-              //从根目录开始的文件路径
-              ModuleName: treeNode.fullFile,
+                //it/test
+                MethodName: treeNode.nodeInfo.describe,
 
-              // 错误堆栈
-              StackTrace: '',
+                // 空
+                FtName: '',
+
+                //从根目录开始的文件路径
+                ModuleName: treeNode.fullFile,
+
+                // 错误堆栈
+                StackTrace: '',
+              },
             },
-          },
+          });
         });
-      });
-      if (opts.isSaveTmpFiles) {
-        // console.log(dwtJunit);
-        fse.outputJsonSync(path.join(outputPath, 'dwt-junit.json'), dwtJunit);
-      }
+        if (opts.isSaveTmpFiles) {
+          // console.log(dwtJunit);
+          fse.outputJsonSync(path.join(outputPath, 'dwt-junit.json'), dwtJunit);
+        }
 
-      // 保存测试报告： dwt-junit.xml
-      fse.outputFileSync(
-        path.join(outputPath, 'dwt-junit.xml'),
-        `<?xml version="1.0" encoding="UTF-8"?>\n${toXML({
-          testsuites: {
-            testsuite: dwtJunit,
-          },
-        })}`,
-        'utf-8',
-      );
+        // 保存测试报告： dwt-junit.xml
+        fse.outputFileSync(
+          path.join(outputPath, 'dwt-junit.xml'),
+          `<?xml version="1.0" encoding="UTF-8"?>\n${toXML({
+            testsuites: {
+              testsuite: dwtJunit,
+            },
+          })}`,
+          'utf-8',
+        );
+      });
+
+      done();
     },
 
-    async afterEach() {
+    afterEach(done) {
       // 记录执行的文件
       const {file} = this.currentTest;
 
       if (testFiles.indexOf(file) < 0) {
         testFiles.push(file);
       }
+
+      done();
     },
   };
 };
