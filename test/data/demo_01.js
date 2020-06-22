@@ -2,7 +2,7 @@ const path = require('path');
 const fse = require('fs-extra');
 const {getParseResult} = require('../../lib');
 const testFiles = [
-  '/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-ts-examples/one-describe-one-it.test.ts',
+  '/Users/wangjinquan/Documents/Project/mocha-annotation/test/data/mocha-ts-examples/one-describe-one-it.test.ts',
   // '/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-ts-examples/TestLoginVerifier.spec.ts',
 ];
 

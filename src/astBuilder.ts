@@ -40,6 +40,7 @@ const parserOptions: ParserOptions = {
       },
     ],
     'throwExpressions',
+    'typescript',
   ],
   ranges: true,
 };
