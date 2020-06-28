@@ -50,7 +50,7 @@ export function getParseResult(
 
   for (let i = 0, l = sourceFiles.length; i < l; i++) {
     let sourceCode = '';
-    let sourceFile = sourceFiles[i];
+    const sourceFile = sourceFiles[i];
 
     try {
       sourceCode = fse.readFileSync(sourceFile, encoding as 'utf8');
