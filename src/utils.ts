@@ -27,7 +27,7 @@ export function checkCallExpression(item: CallExpression): CallType {
     item.callee.type === 'CallExpression' &&
     item.callee.callee.type === 'MemberExpression' &&
     item.callee.callee.object.type === 'Identifier' &&
-    item.callee.callee.object.name === 'it'
+    (item.callee.callee.object.name === 'it' || item.callee.callee.object.name === 'describe')
   ) {
     return CallType.CALLMEM;
   }
