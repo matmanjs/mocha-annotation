@@ -46,6 +46,29 @@ export class Parser {
    * @return {MochaTestTreeNode}
    */
   getParseResult(sourceFiles: string | string[], opts?: getParseResultOpts): MochaTestTreeNode {
+    function handleInherit(nodeInfo: MochaTestTreeNode) {
+      if (!nodeInfo) {
+        return;
+      }
+
+      if (nodeInfo.children) {
+        nodeInfo.children.forEach(childNodeInfo => {
+          // 设置测试文件的完整路径
+          if (nodeInfo.fullFile && !childNodeInfo.fullFile) {
+            childNodeInfo.fullFile = nodeInfo.fullFile;
+          }
+
+          // 设置父节点的id
+          childNodeInfo.parentId = nodeInfo.uuid;
+
+          // 向上继承注解
+          childNodeInfo.comment = Object.assign({}, nodeInfo.comment, childNodeInfo.comment);
+
+          handleInherit(childNodeInfo);
+        });
+      }
+    }
+
     // 设置默认值 utf8
     const encoding = (opts && opts.encoding) || 'utf8';
 
@@ -60,7 +83,7 @@ export class Parser {
 
     for (let i = 0, l = sourceFiles.length; i < l; i++) {
       let sourceCode = '';
-      let sourceFile = sourceFiles[i];
+      const sourceFile = sourceFiles[i];
 
       try {
         sourceCode = fs.readFileSync(sourceFile, encoding as 'utf8');
@@ -78,29 +101,6 @@ export class Parser {
 
     // 若启动继承关系，则还需要额外处理
     if (opts && opts.isInherit) {
-      function handleInherit(nodeInfo: MochaTestTreeNode) {
-        if (!nodeInfo) {
-          return;
-        }
-
-        if (nodeInfo.children) {
-          nodeInfo.children.forEach(childNodeInfo => {
-            // 设置测试文件的完整路径
-            if (nodeInfo.fullFile && !childNodeInfo.fullFile) {
-              childNodeInfo.fullFile = nodeInfo.fullFile;
-            }
-
-            // 设置父节点的id
-            childNodeInfo.parentId = nodeInfo.uuid;
-
-            // 向上继承注解
-            childNodeInfo.comment = Object.assign({}, nodeInfo.comment, childNodeInfo.comment);
-
-            handleInherit(childNodeInfo);
-          });
-        }
-      }
-
       handleInherit(res);
     }
 
