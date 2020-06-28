@@ -56,6 +56,10 @@ export class CommentParser extends Parser {
 
     while (queue.length !== 0) {
       const item = queue.shift();
+      // 默认将自身也加入到列表中
+      if (item && item.nodeInfo && item.nodeInfo.callee === 'describe') {
+        this.nodes.push(item);
+      }
       if (!item || !item.children) {
         continue;
       }
@@ -66,7 +70,7 @@ export class CommentParser extends Parser {
           child.fullFile = item.fullFile;
         }
         // 挂载前继节点
-        // child.parent = item;
+        child.parent = item;
 
         if (child.nodeInfo && child.nodeInfo.callee && child.nodeInfo.callee === 'it') {
           this.nodes.push(child);

@@ -32,7 +32,7 @@ export class Parser {
     this.commentParser = new CommentParser(this.annotation);
     // this.mochaParser = new MochaParser(`${path}/mochawesome.json`);
     this.mochaParser = new MochaParser(
-      '/Users/helinjiang/gitprojects/mocha-annotation/test/data/.test_output/mochawesome.json',
+      '/Users/wangjinquan/Documents/Project/mocha-annotation/test/data/.test_output/mochawesome.json',
     );
   }
 
@@ -191,38 +191,57 @@ export class Parser {
   private resByCase() {
     const resByCase: {[key: string]: any} = {};
 
-    for (const item of Object.keys(this.commentRes)) {
-      if (!this.mochaRes.get(item)) {
-        continue;
+    for (const [key, val] of this.mochaRes) {
+      // 进行最长前缀匹配
+      let temp = this.commentRes[key],
+        len = 0;
+
+      if (!temp) {
+        for (const item of Object.keys(this.commentRes)) {
+          if (key.startsWith(item) && item.length > len) {
+            temp = this.commentRes[item];
+            len = item.length;
+          }
+        }
       }
 
-      resByCase[item] = {
-        status: Object.keys(this.mochaRes.get(item).err).length === 0 ? 'success' : 'fail',
-        comment: this.commentRes[item].comment,
-        results: this.mochaRes.get(item),
+      resByCase[key] = {
+        status: Object.keys(val.err).length === 0 ? 'success' : 'fail',
+        comment: temp.comment,
+        results: val,
       };
     }
+
     this.store(`${this.path}/res-by-case.json`, resByCase);
   }
 
   private resByUser() {
     const resByUser: {[key: string]: any} = {};
 
-    for (const item of Object.keys(this.commentRes)) {
-      const author = this.commentRes[item].comment.author;
+    for (const [key, val] of this.mochaRes) {
+      // 进行最长前缀匹配
+      let temp = this.commentRes[key],
+        len = 0;
+
+      if (!temp) {
+        for (const item of Object.keys(this.commentRes)) {
+          if (key.startsWith(item) && item.length > len) {
+            temp = this.commentRes[item];
+            len = item.length;
+          }
+        }
+      }
+
+      const author = temp.comment.author;
       if (resByUser[author] === undefined) {
         resByUser[author] = [];
       }
 
-      if (!this.mochaRes.get(item)) {
-        continue;
-      }
-
       resByUser[author].push({
-        status: Object.keys(this.mochaRes.get(item).err).length === 0 ? 'success' : 'fail',
-        fullTitle: item,
-        comment: this.commentRes[item].comment,
-        results: this.mochaRes.get(item),
+        status: Object.keys(val.err).length === 0 ? 'success' : 'fail',
+        fullTitle: key,
+        comment: temp,
+        results: val,
       });
     }
 
