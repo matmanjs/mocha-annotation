@@ -57,6 +57,23 @@ describe('测试 parser', function () {
         testid: 'one-describe-many-it:describe2:it2',
       });
     });
+
+    it('动态生成的测试用例无法解析注解', function () {
+      const treeNode = findByTestId(mochaTestTreeNode, 'it-for:describe1:itfor');
+
+      expect(treeNode).to.be.null;
+    });
+
+    it('非动态生成的测试用例可以获得解析注解', function () {
+      const treeNode = findByTestId(mochaTestTreeNode, 'it-for:describe1:it2');
+
+      expect(treeNode && treeNode.nodeInfo && treeNode.nodeInfo.callee).to.equal('it');
+
+      expect(treeNode && treeNode.comment).to.eql({
+        description: 'not in for',
+        testid: 'it-for:describe1:it2',
+      });
+    });
   });
 
   describe('getParseResult and isInherit is true', function () {
