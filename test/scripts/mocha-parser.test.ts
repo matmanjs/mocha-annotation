@@ -2,12 +2,14 @@ import path from 'path';
 import glob from 'glob';
 import 'mocha';
 import {expect} from 'chai';
-import {getParseResult, getTestCaseMap} from '../../src/mocha-parser';
-import {MochaTestTreeNode, TestCaseMap} from '../../src/types';
+import {getParseResult, getTestCaseMap, getTestResultMap} from '../../src/mocha-parser';
+import {MochaTestTreeNode, TestCaseMap, TestResultMap} from '../../src/types';
 import {findByTestId} from '../test-util';
+import fse from 'fs-extra';
 
 const MOCHA_EXAMPLES_PATH = path.join(__dirname, '../data/mocha-examples');
 const MOCHA_TS_EXAMPLES_PATH = path.join(__dirname, '../data/mocha-ts-examples');
+const MOCHAWESOME_PATH = path.join(__dirname, '../data/.test_output/mochawesome.json');
 
 describe('测试 parser(使用 js)', function () {
   describe('getParseResult and isInherit is false', function () {
@@ -196,6 +198,38 @@ describe('测试 parser(使用 js)', function () {
       });
       expect(treeNode.nodeInfo && treeNode.nodeInfo.describe).to.equal('1 等于 1');
       expect(treeNode.nodeInfo && treeNode.nodeInfo.callee).to.equal('it');
+    });
+  });
+
+  describe('getTestResultMap and isInherit is true', function () {
+    let testResultMap: TestResultMap;
+    let testCaseMap: TestCaseMap;
+    let mochawesomeJson: any;
+
+    before(function () {
+      const files = glob
+        .sync('**/*.test.js', {
+          cwd: MOCHA_EXAMPLES_PATH,
+          dot: true,
+        })
+        .map(item => path.join(MOCHA_EXAMPLES_PATH, item));
+
+      const mochaTestTreeNode = getParseResult(files, {isInherit: true});
+      testCaseMap = getTestCaseMap(mochaTestTreeNode, ' ');
+      testResultMap = getTestResultMap(mochaTestTreeNode, MOCHAWESOME_PATH);
+      mochawesomeJson = fse.readJSONSync(MOCHAWESOME_PATH);
+    });
+
+    it('mochawesome.json 中总测试用例数为 18', function () {
+      expect(mochawesomeJson.stats.tests).to.equal(18);
+    });
+
+    it('testCaseMap 中存在记录数为 15', function () {
+      expect(Object.keys(testCaseMap)).to.have.lengthOf(15);
+    });
+
+    it('testResultMap 中存在记录数为 18', function () {
+      expect(Object.keys(testResultMap)).to.have.lengthOf(18);
     });
   });
 });

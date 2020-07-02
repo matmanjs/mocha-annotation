@@ -128,7 +128,10 @@ export function getTestCaseMap(
         fullTitleSep || ' ',
       );
 
-      map[treeNode.fullTitle] = treeNode;
+      // 仅限于 it ，忽略掉 describe
+      if (treeNode.nodeInfo && treeNode.nodeInfo.callee === 'it') {
+        map[treeNode.fullTitle] = treeNode;
+      }
     } else {
       treeNode.fullTitle = treeNode.fullFile;
     }
