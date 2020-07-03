@@ -49,7 +49,7 @@ describe('一个 describe 和一个 it', function () {
     "children": [
         {
             "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-            "uuid": "f8d25bd4-4c89-41a9-93a1-fd20a5367067",
+            "uuid": "267d1bc4-3c65-4710-ba87-7d471845c927",
             "children": [
                 {
                     "comment": {
@@ -61,9 +61,9 @@ describe('一个 describe 和一个 it', function () {
                     "nodeInfo": {
                         "describe": "一个 describe 和一个 it",
                         "callee": "describe",
-                        "prelayer": "f8d25bd4-4c89-41a9-93a1-fd20a5367067"
+                        "prelayer": "267d1bc4-3c65-4710-ba87-7d471845c927"
                     },
-                    "uuid": "97b41416-7061-4810-b951-5561aa486391",
+                    "uuid": "42f9e2e4-524d-4b79-b8cb-f752dddab5c7",
                     "children": [
                         {
                             "comment": {
@@ -75,16 +75,16 @@ describe('一个 describe 和一个 it', function () {
                             "nodeInfo": {
                                 "describe": "1 等于 1",
                                 "callee": "it",
-                                "prelayer": "97b41416-7061-4810-b951-5561aa486391"
+                                "prelayer": "42f9e2e4-524d-4b79-b8cb-f752dddab5c7"
                             },
-                            "uuid": "1c87ec72-74a6-4970-b52a-fda4236437e0",
+                            "uuid": "232e201b-eec3-4967-bd9a-3e710f31b75b",
                             "children": [],
                             "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-                            "parentId": "97b41416-7061-4810-b951-5561aa486391"
+                            "parentId": "42f9e2e4-524d-4b79-b8cb-f752dddab5c7"
                         }
                     ],
                     "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-                    "parentId": "f8d25bd4-4c89-41a9-93a1-fd20a5367067"
+                    "parentId": "267d1bc4-3c65-4710-ba87-7d471845c927"
                 }
             ],
             "comment": {}
@@ -93,54 +93,20 @@ describe('一个 describe 和一个 it', function () {
 }
 ```
 
-### 2.2 getTestCaseMap(mochaTestTreeNode, fullTitleSep)
+### 2.2 getTestResultMap(mochaTestTreeNode, opts)
 
-将 `getParseResult(sourceFiles, opts)` 得到的树形结果进行处理，获得一个扁平化的数据字典，`key` 为测试用例的描述，也即 `fullTitle` 。
+获得测试结果，一个扁平化的数据字典，`key` 为测试用例的描述，也即 `fullTitle` 。可以借助 [mochawesome](https://www.npmjs.com/package/mochawesome) 生成的 `mochawesome.json`，获得最终测试结果的结果。
 
 - `mochaTestTreeNode`，`MochaTestTreeNode`，要解析的测试文件的列表
-- `fullTitleSep`，`String`，组合 `fullTitle` 是需要的间隔符号，默认情况下该值会由用例数中的描述组合而成，组合间隔符默认为空格
+- `opts`，`Object`，额外参数
+  - `opts.fullTitleSep`，`String`，组合 `fullTitle` 是需要的间隔符号，默认情况下该值会由用例数中的描述组合而成，组合间隔符默认为空格
+  - `opts.mochawesomeJsonFile`，`String`，[mochawesome](https://www.npmjs.com/package/mochawesome) 生成的 `mochawesome.json` 路径
 
-> `fullTitle` 参考 mochawesome.json 中的定义方式，即从 suit 到 test 的 title 值拼接起来，中间用空格分割
+
+> `fullTitle` 参考 mochawesome.json 中的定义方式，即从 suit 到 test 的 title 值拼接起来，中间用 `fullTitleSep` 分割
 
 ```json
 {
-    "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it": {
-        "comment": {
-            "author": "matmanjs",
-            "description": "hello,world!",
-            "other": "one-describe-one-it.test.js",
-            "testid": "one-describe-one-it:describe1"
-        },
-        "nodeInfo": {
-            "describe": "一个 describe 和一个 it",
-            "callee": "describe",
-            "prelayer": "f8d25bd4-4c89-41a9-93a1-fd20a5367067"
-        },
-        "uuid": "97b41416-7061-4810-b951-5561aa486391",
-        "children": [
-            {
-                "comment": {
-                    "author": "matmanjs",
-                    "description": "hello,world!",
-                    "other": "one-describe-one-it.test.js",
-                    "testid": "one-describe-one-it:describe1:it1"
-                },
-                "nodeInfo": {
-                    "describe": "1 等于 1",
-                    "callee": "it",
-                    "prelayer": "97b41416-7061-4810-b951-5561aa486391"
-                },
-                "uuid": "1c87ec72-74a6-4970-b52a-fda4236437e0",
-                "children": [],
-                "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-                "parentId": "97b41416-7061-4810-b951-5561aa486391",
-                "fullTitle": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it 1 等于 1"
-            }
-        ],
-        "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-        "parentId": "f8d25bd4-4c89-41a9-93a1-fd20a5367067",
-        "fullTitle": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it"
-    },
     "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it 1 等于 1": {
         "comment": {
             "author": "matmanjs",
@@ -151,20 +117,31 @@ describe('一个 describe 和一个 it', function () {
         "nodeInfo": {
             "describe": "1 等于 1",
             "callee": "it",
-            "prelayer": "97b41416-7061-4810-b951-5561aa486391"
+            "prelayer": "42f9e2e4-524d-4b79-b8cb-f752dddab5c7"
         },
-        "uuid": "1c87ec72-74a6-4970-b52a-fda4236437e0",
+        "uuid": "232e201b-eec3-4967-bd9a-3e710f31b75b",
         "children": [],
         "fullFile": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js",
-        "parentId": "97b41416-7061-4810-b951-5561aa486391",
-        "fullTitle": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it 1 等于 1"
+        "parentId": "42f9e2e4-524d-4b79-b8cb-f752dddab5c7",
+        "fullTitle": "/Users/helinjiang/gitprojects/mocha-annotation/test/data/mocha-examples/one-describe-one-it.test.js 一个 describe 和一个 it 1 等于 1",
+        "result": {
+            "title": "1 等于 1",
+            "fullTitle": "一个 describe 和一个 it 1 等于 1",
+            "timedOut": false,
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "context": null,
+            "code": "expect(1).to.equal(1);",
+            "err": {},
+            "uuid": "43f91ee7-b9ac-4cbc-bd35-8d38b0fef5fb",
+            "parentUUID": "4a52b6a5-5b59-4bf9-83ce-187e5d099b82",
+            "isHook": false,
+            "skipped": false
+        }
     }
 }
 ```
-
-### 2.3 getTestResultMap(mochaTestTreeNode, mochawesomeJsonFile)
-
-借助 [mochawesome](https://www.npmjs.com/package/mochawesome) 生成的 `mochawesome.json`，获得最终测试结果的结果。
-
-- `mochaTestTreeNode`，`MochaTestTreeNode`，要解析的测试文件的列表
-- `mochawesomeJsonFile`，`String`，[mochawesome](https://www.npmjs.com/package/mochawesome) 生成的 `mochawesome.json` 路径
