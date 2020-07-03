@@ -34,6 +34,7 @@ export interface MochaSource {
 }
 
 export interface MochawesomeSuiteTest {
+  uuid: string;
   title: string;
   fullTitle: string;
   state: string;
@@ -46,6 +47,8 @@ export interface MochawesomeSuiteTest {
 }
 
 export interface MochawesomeSuite {
+  uuid: string;
+  title: string;
   fullFile: string;
   tests: MochawesomeSuiteTest[];
   suites: MochawesomeSuite[];
@@ -82,6 +85,9 @@ export interface MochaTestTreeNode {
 
   // 测试结果的详细信息，从 mochawesome 获得
   result?: MochawesomeSuiteTest;
+
+  // 是否来自继承，因为有时候无法解析到注解，只能走继承
+  isInherit?: boolean;
 }
 
 export interface TestCaseMap {
