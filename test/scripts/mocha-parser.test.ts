@@ -201,10 +201,12 @@ describe('测试 parser(使用 js)', function () {
     });
   });
 
-  describe('getTestResultMap and isInherit is true', function () {
+  describe('getTestResultMap and isInherit is true and opts is undefined', function () {
     let testResultMap: TestResultMap;
     let testCaseMap: TestCaseMap;
     let mochawesomeJson: any;
+
+    const fullTitleSep = ' ';
 
     before(function () {
       const files = glob
@@ -215,8 +217,8 @@ describe('测试 parser(使用 js)', function () {
         .map(item => path.join(MOCHA_EXAMPLES_PATH, item));
 
       const mochaTestTreeNode = getParseResult(files, {isInherit: true});
-      testCaseMap = getTestCaseMap(mochaTestTreeNode, ' ');
-      testResultMap = getTestResultMap(mochaTestTreeNode, MOCHAWESOME_PATH);
+      testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
+      testResultMap = getTestResultMap(mochaTestTreeNode);
       mochawesomeJson = fse.readJSONSync(MOCHAWESOME_PATH);
     });
 
@@ -224,12 +226,86 @@ describe('测试 parser(使用 js)', function () {
       expect(mochawesomeJson.stats.tests).to.equal(18);
     });
 
-    it('testCaseMap 中存在记录数为 15', function () {
-      expect(Object.keys(testCaseMap)).to.have.lengthOf(15);
+    it('testCaseMap 中存在记录数为 27', function () {
+      expect(Object.keys(testCaseMap)).to.have.lengthOf(27);
     });
 
-    it('testResultMap 中存在记录数为 18', function () {
-      expect(Object.keys(testResultMap)).to.have.lengthOf(18);
+    it('testResultMap 中存在记录数为 15 个而不是 18 个，因为循环产生的测试用例无法获得', function () {
+      expect(Object.keys(testResultMap)).to.have.lengthOf(15);
+    });
+
+    it('testResultMap 中存在：验证 for 循环产生 it 对比：不是 for 产生', function () {
+      const title = [
+        path.join(MOCHA_EXAMPLES_PATH, './it-for.test.js'),
+        '验证 for 循环产生 it',
+        '对比：不是 for 产生',
+      ].join(fullTitleSep);
+
+      expect(testResultMap).to.have.any.keys(title);
+    });
+
+    it('testResultMap 中不存在：验证 for 循环产生 it 循环验证： 0 等于 0 ', function () {
+      const title = [
+        path.join(MOCHA_EXAMPLES_PATH, './it-for.test.js'),
+        '验证 for 循环产生 it',
+        '循环验证： 0 等于 0 ',
+      ].join(fullTitleSep);
+
+      expect(testResultMap).to.not.have.any.keys(title);
+    });
+  });
+
+  describe('getTestResultMap and isInherit is true and opts.fullTitleSep is #', function () {
+    let testResultMap: TestResultMap;
+    let testCaseMap: TestCaseMap;
+    let mochawesomeJson: any;
+
+    const fullTitleSep = '#';
+
+    before(function () {
+      const files = glob
+        .sync('**/*.test.js', {
+          cwd: MOCHA_EXAMPLES_PATH,
+          dot: true,
+        })
+        .map(item => path.join(MOCHA_EXAMPLES_PATH, item));
+
+      const mochaTestTreeNode = getParseResult(files, {isInherit: true});
+      testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
+      testResultMap = getTestResultMap(mochaTestTreeNode, {fullTitleSep});
+      mochawesomeJson = fse.readJSONSync(MOCHAWESOME_PATH);
+    });
+
+    it('mochawesome.json 中总测试用例数为 18', function () {
+      expect(mochawesomeJson.stats.tests).to.equal(18);
+    });
+
+    it('testCaseMap 中存在记录数为 27', function () {
+      expect(Object.keys(testCaseMap)).to.have.lengthOf(27);
+    });
+
+    it('testResultMap 中存在记录数为 15 个而不是 18 个，因为循环产生的测试用例无法获得', function () {
+      expect(Object.keys(testResultMap)).to.have.lengthOf(15);
+    });
+
+    it('testResultMap 中存在：验证 for 循环产生 it 对比：不是 for 产生', function () {
+      const title = [
+        path.join(MOCHA_EXAMPLES_PATH, './it-for.test.js'),
+        '验证 for 循环产生 it',
+        '对比：不是 for 产生',
+      ].join(fullTitleSep);
+
+      expect(testResultMap).to.have.any.keys(title);
+    });
+
+    it('testResultMap 中不存在：验证 for 循环产生 it 循环验证： 0 等于 0 ', function () {
+      const title = [
+        path.join(MOCHA_EXAMPLES_PATH, './it-for.test.js'),
+        '验证 for 循环产生 it',
+        '循环验证： 0 等于 0 ',
+      ].join(fullTitleSep);
+
+      expect(testResultMap).to.not.have.any.keys(title);
     });
   });
 });
