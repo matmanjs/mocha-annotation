@@ -19,6 +19,14 @@ interface GetParseResultOpts {
   isInherit?: boolean;
 }
 
+interface GetTestResultMapOpts {
+  // 名字分隔符，默认是空格间隔
+  fullTitleSep?: string;
+
+  // mochawesomeJsonFile mochawesome.json 文件的绝对路径
+  mochawesomeJsonFile?: string;
+}
+
 /**
  * 获取解析结果
  *
@@ -156,13 +164,18 @@ export function getTestCaseMap(
  * 获得测试用例的 map
  *
  * @param {MochaTestTreeNode} mochaTestTreeNode
- * @param {string} mochawesomeJsonFile mochawesome.json 文件的绝对路径
+ * @param {Object} opts
+ * @param {string} [opts.fullTitleSep] 名字分隔符，默认是空格间隔
+ * @param {string} [opts.mochawesomeJsonFile] mochawesome.json 文件的绝对路径
  */
 export function getTestResultMap(
   mochaTestTreeNode: MochaTestTreeNode,
-  mochawesomeJsonFile?: string,
+  opts?: GetTestResultMapOpts,
 ): TestResultMap {
-  const testCaseMap = getTestCaseMap(mochaTestTreeNode);
+  const {fullTitleSep, mochawesomeJsonFile} = opts || {};
+
+  // 获得 case map
+  const testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
 
   // 如果不传递 mochawesome.json ，则直接返回结果即可
   if (!mochawesomeJsonFile || !fse.existsSync(mochawesomeJsonFile)) {
@@ -176,7 +189,6 @@ export function getTestResultMap(
   // 由于语法解析只能解析部分场景，而 mochawesome.json 中有完整的用例，因此需要将两者进行合并
   // 并且 mochawesome.json 已经有测试结果了，因此直接设置测试结果
   const mochawesomeJson = fse.readJSONSync(mochawesomeJsonFile);
-  const fullTitleSep = ' ';
 
   function search(suites: MochawesomeSuite[], parentFullTitle?: string) {
     if (!suites) {
@@ -193,7 +205,7 @@ export function getTestResultMap(
       if (suite.tests && suite.tests.length) {
         suite.tests.forEach(suiteTest => {
           // it 的 fullTitle
-          const curSuiteTestFullTitle = [suite.fullFile, suiteTest.fullTitle].join(
+          const curSuiteTestFullTitle = [curSuiteFullTitle, suiteTest.title].join(
             fullTitleSep || ' ',
           );
 
