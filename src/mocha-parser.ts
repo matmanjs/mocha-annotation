@@ -177,14 +177,20 @@ export function getTestResultMap(
   // 获得 case map
   const testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
 
+  const newTestResultMap: TestResultMap = {};
+
   // 如果不传递 mochawesome.json ，则直接返回结果即可
   if (!mochawesomeJsonFile || !fse.existsSync(mochawesomeJsonFile)) {
-    return {
-      ...testCaseMap,
-    } as TestResultMap;
-  }
+    Object.keys(testCaseMap).forEach(key => {
+      const curTestCase = testCaseMap[key];
+      // 仅限于 it ，不需要 describe
+      if (curTestCase && curTestCase.nodeInfo && curTestCase.nodeInfo.callee === 'it') {
+        newTestResultMap[curTestCase.fullTitle || 'unknown'] = {...curTestCase};
+      }
+    });
 
-  const newTestResultMap: TestResultMap = {};
+    return newTestResultMap;
+  }
 
   // 由于语法解析只能解析部分场景，而 mochawesome.json 中有完整的用例，因此需要将两者进行合并
   // 并且 mochawesome.json 已经有测试结果了，因此直接设置测试结果
