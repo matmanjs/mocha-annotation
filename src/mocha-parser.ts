@@ -19,6 +19,14 @@ interface GetParseResultOpts {
   isInherit?: boolean;
 }
 
+interface GetTestResultMapOpts {
+  // 名字分隔符，默认是空格间隔
+  fullTitleSep?: string;
+
+  // mochawesomeJsonFile mochawesome.json 文件的绝对路径
+  mochawesomeJsonFile?: string;
+}
+
 /**
  * 获取解析结果
  *
@@ -50,7 +58,7 @@ export function getParseResult(
 
   for (let i = 0, l = sourceFiles.length; i < l; i++) {
     let sourceCode = '';
-    let sourceFile = sourceFiles[i];
+    const sourceFile = sourceFiles[i];
 
     try {
       sourceCode = fse.readFileSync(sourceFile, encoding as 'utf8');
@@ -129,6 +137,11 @@ export function getTestCaseMap(
       );
 
       map[treeNode.fullTitle] = treeNode;
+
+      // 仅限于 it ，忽略掉 describe
+      // if (treeNode.nodeInfo && treeNode.nodeInfo.callee === 'it') {
+      //   map[treeNode.fullTitle] = treeNode;
+      // }
     } else {
       treeNode.fullTitle = treeNode.fullFile;
     }
@@ -151,42 +164,105 @@ export function getTestCaseMap(
  * 获得测试用例的 map
  *
  * @param {MochaTestTreeNode} mochaTestTreeNode
- * @param {string} mochawesomeJsonFile mochawesome.json 文件的绝对路径
+ * @param {Object} opts
+ * @param {string} [opts.fullTitleSep] 名字分隔符，默认是空格间隔
+ * @param {string} [opts.mochawesomeJsonFile] mochawesome.json 文件的绝对路径
  */
 export function getTestResultMap(
   mochaTestTreeNode: MochaTestTreeNode,
-  mochawesomeJsonFile: string,
+  opts?: GetTestResultMapOpts,
 ): TestResultMap {
-  const map: TestResultMap = {};
+  const {fullTitleSep, mochawesomeJsonFile} = opts || {};
 
-  const testCaseMap = getTestCaseMap(mochaTestTreeNode);
+  // 获得 case map
+  const testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
 
+  const newTestResultMap: TestResultMap = {};
+
+  // 如果不传递 mochawesome.json ，则直接返回结果即可
+  if (!mochawesomeJsonFile || !fse.existsSync(mochawesomeJsonFile)) {
+    Object.keys(testCaseMap).forEach(key => {
+      const curTestCase = testCaseMap[key];
+      // 仅限于 it ，不需要 describe
+      if (curTestCase && curTestCase.nodeInfo && curTestCase.nodeInfo.callee === 'it') {
+        newTestResultMap[curTestCase.fullTitle || 'unknown'] = {...curTestCase};
+      }
+    });
+
+    return newTestResultMap;
+  }
+
+  // 由于语法解析只能解析部分场景，而 mochawesome.json 中有完整的用例，因此需要将两者进行合并
+  // 并且 mochawesome.json 已经有测试结果了，因此直接设置测试结果
   const mochawesomeJson = fse.readJSONSync(mochawesomeJsonFile);
 
-  function search(suites: MochawesomeSuite[]) {
+  function search(suites: MochawesomeSuite[], parentFullTitle?: string) {
     if (!suites) {
       return;
     }
 
     suites.forEach(suite => {
+      // describe 的 fullTitle
+      const curSuiteFullTitle =
+        parentFullTitle || suite.fullFile
+          ? [parentFullTitle || suite.fullFile, suite.title].join(fullTitleSep || ' ')
+          : suite.title;
+
       if (suite.tests && suite.tests.length) {
         suite.tests.forEach(suiteTest => {
-          const curFullTitle = `${suite.fullFile} ${suiteTest.fullTitle}`;
-          if (testCaseMap[curFullTitle]) {
-            testCaseMap[curFullTitle].result = suiteTest as MochawesomeSuiteTest;
-          }
+          // it 的 fullTitle
+          const curSuiteTestFullTitle = [curSuiteFullTitle, suiteTest.title].join(
+            fullTitleSep || ' ',
+          );
 
-          map[curFullTitle] = testCaseMap[curFullTitle];
+          // 解析注解之后的 it 的treeNode
+          const curTreeNode = testCaseMap[curSuiteTestFullTitle];
+
+          if (curTreeNode) {
+            // 既在注解解析结果中，又在 mochawesome.json 中，则直接将结果复制过来即可
+            curTreeNode.result = suiteTest as MochawesomeSuiteTest;
+            newTestResultMap[curSuiteTestFullTitle] = curTreeNode;
+          } else {
+            // 不在注解解析结果中，只在 mochawesome.json 中
+            // 则说明当前的测试用例没有注解，则继承父节点的注释
+            const parentTreeNode = testCaseMap[curSuiteFullTitle];
+            if (parentTreeNode) {
+              console.log(
+                `Could not parse annotation for: ${curSuiteTestFullTitle} ! So change to inherit annotation: ${curSuiteFullTitle} !`,
+              );
+
+              // 继承父节点的信息
+              testCaseMap[curSuiteTestFullTitle] = _.merge({}, parentTreeNode, {
+                result: suiteTest as MochawesomeSuiteTest,
+                nodeInfo: {
+                  describe: suiteTest.title,
+                  callee: 'it',
+                  prelayer: suiteTest.uuid,
+                },
+                uuid: suiteTest.uuid,
+                parentId: parentTreeNode.uuid,
+                children: [],
+                isInherit: true,
+              });
+
+              newTestResultMap[curSuiteTestFullTitle] = testCaseMap[curSuiteTestFullTitle];
+            } else {
+              console.error(
+                `Could not parse annotation for: ${curSuiteTestFullTitle} AND could not inherit any annotation!`,
+              );
+            }
+          }
         });
       }
 
+      // 递归查询
       if (suite.suites && suite.suites.length) {
-        search(suite.suites);
+        search(suite.suites, curSuiteFullTitle);
       }
     });
   }
 
   search(mochawesomeJson.results);
 
-  return map;
+  return newTestResultMap;
 }
