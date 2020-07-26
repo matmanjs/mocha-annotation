@@ -2,10 +2,10 @@ import fse from 'fs-extra';
 import _ from 'lodash';
 import {
   MochaTestTreeNode,
-  TestCaseMap,
-  TestResultMap,
   MochawesomeSuite,
   MochawesomeSuiteTest,
+  TestCaseMap,
+  TestResultMap,
 } from './types';
 import {MapNode, ProcessAST} from './processAST';
 import {AstBuilder} from './astBuilder';
@@ -25,6 +25,9 @@ interface GetTestResultMapOpts {
 
   // mochawesomeJsonFile mochawesome.json 文件的绝对路径
   mochawesomeJsonFile?: string;
+
+  // 是否使用 mochapack 打包一起来测试的
+  mochapack?: boolean;
 }
 
 /**
@@ -175,7 +178,7 @@ export function getTestResultMap(
   const {fullTitleSep, mochawesomeJsonFile} = opts || {};
 
   // 获得 case map
-  const testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
+  let testCaseMap = getTestCaseMap(mochaTestTreeNode, fullTitleSep);
 
   const newTestResultMap: TestResultMap = {};
 
@@ -195,6 +198,26 @@ export function getTestResultMap(
   // 由于语法解析只能解析部分场景，而 mochawesome.json 中有完整的用例，因此需要将两者进行合并
   // 并且 mochawesome.json 已经有测试结果了，因此直接设置测试结果
   const mochawesomeJson = fse.readJSONSync(mochawesomeJsonFile);
+
+  // 使用 mochapack 方式测试时，会将所有文件打包在一起进行测试，
+  // 此时需要特殊替换，否则在 mochawesome 中将无法找到记录
+  if (opts?.mochapack) {
+    const mochapackFile = mochawesomeJson.results[0].suites[0].fullFile;
+
+    const newTestCaseMap: TestCaseMap = {};
+
+    Object.keys(testCaseMap).forEach(fullTitle => {
+      // 将第一个文件路径替换为压缩之后的路径，这样方便在 mochawesome 中找到记录
+      const arr = fullTitle.split(fullTitleSep || ' ');
+      if (arr.length > 1) {
+        arr[0] = mochapackFile;
+      }
+
+      newTestCaseMap[arr.join(fullTitleSep || ' ')] = testCaseMap[fullTitle];
+    });
+
+    testCaseMap = newTestCaseMap;
+  }
 
   function search(suites: MochawesomeSuite[], parentFullTitle?: string) {
     if (!suites) {
