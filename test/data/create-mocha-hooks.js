@@ -159,6 +159,13 @@ module.exports = (outputPath, opts = {}) => {
           fse.outputJsonSync(path.join(outputPath, 'dwt-junit.json'), dwtJunit);
         }
 
+        const xmlOptions = {
+          filter: {
+            '"': '&quot;',
+            '\'': '&apos;',
+          },
+        };
+
         // 保存测试报告： dwt-junit.xml
         fse.outputFileSync(
           path.join(outputPath, 'dwt-junit.xml'),
@@ -166,7 +173,7 @@ module.exports = (outputPath, opts = {}) => {
             testsuites: {
               testsuite: dwtJunit,
             },
-          })}`,
+          }, xmlOptions)}`,
           'utf-8',
         );
       });
