@@ -1,0 +1,3387 @@
+{
+    "children": [
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+            "uuid": "95b306b6-c2e8-4ae4-a64a-3a7e6feb6668",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test common/ad.js",
+                        "callee": "describe",
+                        "prelayer": "95b306b6-c2e8-4ae4-a64a-3a7e6feb6668"
+                    },
+                    "uuid": "b277b847-292d-4148-91a1-0817dc59b2a5",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test loadJs(not loaded)",
+                                "callee": "it",
+                                "prelayer": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                            },
+                            "uuid": "923b368d-eb2d-4c6e-82cf-0880112dc658",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+                            "parentId": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test getDeviceInfo",
+                                "callee": "it",
+                                "prelayer": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                            },
+                            "uuid": "242a6b53-f9ba-4f52-a8a4-6d219e6fd6d1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+                            "parentId": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test getAdInfo",
+                                "callee": "it",
+                                "prelayer": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                            },
+                            "uuid": "3b433446-3686-418e-8ef4-2e1cd1c8a430",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+                            "parentId": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test playAd",
+                                "callee": "it",
+                                "prelayer": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                            },
+                            "uuid": "4974e64b-c3fe-4f8e-8230-191691238778",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+                            "parentId": "b277b847-292d-4148-91a1-0817dc59b2a5"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/ad.spec.js",
+                    "parentId": "95b306b6-c2e8-4ae4-a64a-3a7e6feb6668"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+            "uuid": "f24d311d-6d4b-40eb-baf9-b6100f8ecd4f",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test common/calender.js",
+                        "callee": "describe",
+                        "prelayer": "f24d311d-6d4b-40eb-baf9-b6100f8ecd4f"
+                    },
+                    "uuid": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "测试 initCalender",
+                                "callee": "it",
+                                "prelayer": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                            },
+                            "uuid": "04b267d4-d4db-4a66-908c-503b63dcf6e2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+                            "parentId": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "测试 getDateByMonth 不指定后延月份",
+                                "callee": "it",
+                                "prelayer": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                            },
+                            "uuid": "9ac76f68-888c-4719-863f-ed9b4e214f93",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+                            "parentId": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "测试 getDateByMonth 指定后延月份",
+                                "callee": "it",
+                                "prelayer": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                            },
+                            "uuid": "ac49faca-7098-4260-bb45-e39a40e2490a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+                            "parentId": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "测试 formatStrDate",
+                                "callee": "it",
+                                "prelayer": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                            },
+                            "uuid": "9c9e9cf2-9e65-4c4d-a47e-531aa1e023a7",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+                            "parentId": "cf1853c4-95a6-46ba-aa2b-c65dd51fa4d7"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/calender.spec.js",
+                    "parentId": "f24d311d-6d4b-40eb-baf9-b6100f8ecd4f"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+            "uuid": "53d63a53-e40d-4e8c-9ed7-8053e5b38cdb",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test common/giftPay.js",
+                        "callee": "describe",
+                        "prelayer": "53d63a53-e40d-4e8c-9ed7-8053e5b38cdb"
+                    },
+                    "uuid": "cb05c615-42bc-4799-86ea-18b85d0686b8",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test giftPay succ(free gift)",
+                                "callee": "it",
+                                "prelayer": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                            },
+                            "uuid": "3c7f7feb-882c-47f4-8b44-b65fc0a09fdf",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                            "parentId": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test giftPay succ(not free gift)",
+                                "callee": "it",
+                                "prelayer": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                            },
+                            "uuid": "3cbdb743-e2da-4f5d-acf9-85224bb20053",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                            "parentId": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test getIapDiscountPrice",
+                                "callee": "it",
+                                "prelayer": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                            },
+                            "uuid": "d98f32f3-97be-4732-a27e-4cf708891074",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                            "parentId": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test checkFriendState",
+                                "callee": "it",
+                                "prelayer": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                            },
+                            "uuid": "10ef8ec0-5077-45cb-9050-b2d87893f4ec",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                            "parentId": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test openVip",
+                                "callee": "it",
+                                "prelayer": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                            },
+                            "uuid": "aab87956-2906-4712-b3f5-79066ffd51fc",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                            "parentId": "cb05c615-42bc-4799-86ea-18b85d0686b8"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/giftPay.spec.js",
+                    "parentId": "53d63a53-e40d-4e8c-9ed7-8053e5b38cdb"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/lottie.spec.js",
+            "uuid": "bd701fa7-1a8c-40db-b842-99d8a8af9d28",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test common/lottie.js",
+                        "callee": "describe",
+                        "prelayer": "bd701fa7-1a8c-40db-b842-99d8a8af9d28"
+                    },
+                    "uuid": "e63f69e3-0a76-4fe4-b5e0-49a90a3660d6",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test preloadSource",
+                                "callee": "it",
+                                "prelayer": "e63f69e3-0a76-4fe4-b5e0-49a90a3660d6"
+                            },
+                            "uuid": "e718d836-dfbd-4837-929c-8d1e3f6a1df8",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/lottie.spec.js",
+                            "parentId": "e63f69e3-0a76-4fe4-b5e0-49a90a3660d6"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test playAnimation",
+                                "callee": "it",
+                                "prelayer": "e63f69e3-0a76-4fe4-b5e0-49a90a3660d6"
+                            },
+                            "uuid": "e235fdc1-bdc3-4f3c-ae04-17a28e277282",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/lottie.spec.js",
+                            "parentId": "e63f69e3-0a76-4fe4-b5e0-49a90a3660d6"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/lottie.spec.js",
+                    "parentId": "bd701fa7-1a8c-40db-b842-99d8a8af9d28"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+            "uuid": "6bae2e00-68e6-485b-9414-a54b7094e874",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "common/util",
+                        "callee": "describe",
+                        "prelayer": "6bae2e00-68e6-485b-9414-a54b7094e874"
+                    },
+                    "uuid": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "普通礼物",
+                                "callee": "it",
+                                "prelayer": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                            },
+                            "uuid": "656b4b96-0f7c-4e4a-9779-6ca2d9973e08",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+                            "parentId": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "大会员礼物",
+                                "callee": "it",
+                                "prelayer": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                            },
+                            "uuid": "0a300eb3-1c8e-45e9-83c2-37a487a57d85",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+                            "parentId": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "黄钻礼物",
+                                "callee": "it",
+                                "prelayer": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                            },
+                            "uuid": "a7d0d3fa-8641-4c6d-a673-aa6cf8b022c1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+                            "parentId": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "会员礼物",
+                                "callee": "it",
+                                "prelayer": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                            },
+                            "uuid": "9f0bbc93-1a13-4fdc-aa30-3c6d0f8f9df6",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+                            "parentId": "b1aa338e-c1f5-479a-b5bd-8bd7ac76e8cd"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/common/util.spec.js",
+                    "parentId": "6bae2e00-68e6-485b-9414-a54b7094e874"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/couple/common/api.spec.js",
+            "uuid": "91b984ef-35dc-482d-a705-27bc2480fa4f",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test couple/common/api.js",
+                        "callee": "describe",
+                        "prelayer": "91b984ef-35dc-482d-a705-27bc2480fa4f"
+                    },
+                    "uuid": "da069796-777e-4efa-b5b5-a2fc71df9361",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "receive correct param",
+                                "callee": "it",
+                                "prelayer": "da069796-777e-4efa-b5b5-a2fc71df9361"
+                            },
+                            "uuid": "3f559e57-e80e-45bc-bcff-a250185f3c9a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/couple/common/api.spec.js",
+                            "parentId": "da069796-777e-4efa-b5b5-a2fc71df9361"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "do handlerDataFun",
+                                "callee": "it",
+                                "prelayer": "da069796-777e-4efa-b5b5-a2fc71df9361"
+                            },
+                            "uuid": "bf180500-c1d5-41fc-abfe-df7a61920e27",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/couple/common/api.spec.js",
+                            "parentId": "da069796-777e-4efa-b5b5-a2fc71df9361"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/couple/common/api.spec.js",
+                    "parentId": "91b984ef-35dc-482d-a705-27bc2480fa4f"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+            "uuid": "8e248484-d6ac-4581-a4d4-7258b1a03990",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "8e248484-d6ac-4581-a4d4-7258b1a03990"
+                    },
+                    "uuid": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test mounted",
+                                "callee": "it",
+                                "prelayer": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                            },
+                            "uuid": "73d7d8a4-e2b4-46a4-ab6b-dc920b3a6672",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift",
+                                "callee": "it",
+                                "prelayer": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                            },
+                            "uuid": "2b9488da-c04e-42d8-8fb2-45681593264d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goSetPage",
+                                "callee": "it",
+                                "prelayer": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                            },
+                            "uuid": "95e9187c-6352-4ff3-b6de-98627ed98572",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goMyGiftWall",
+                                "callee": "it",
+                                "prelayer": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                            },
+                            "uuid": "d87ce714-de0a-481e-ab8e-0b6afd2d6aa9",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "f87b65f1-7bdb-40db-a30e-f3e3b5d3ec12"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                    "parentId": "8e248484-d6ac-4581-a4d4-7258b1a03990"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/app.vue with hidden mode",
+                        "callee": "describe",
+                        "prelayer": "8e248484-d6ac-4581-a4d4-7258b1a03990"
+                    },
+                    "uuid": "6cd299d7-53dc-4113-a610-813d278c43ec",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test mounted",
+                                "callee": "it",
+                                "prelayer": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                            },
+                            "uuid": "e80a76a6-71e8-4022-b325-e90f25aaf46c",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift",
+                                "callee": "it",
+                                "prelayer": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                            },
+                            "uuid": "d4a646a9-c066-414d-a86c-cfe46067c46b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goSetPage",
+                                "callee": "it",
+                                "prelayer": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                            },
+                            "uuid": "a8439e7e-a596-4bdc-b85a-6643481652ba",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goMyGiftWall",
+                                "callee": "it",
+                                "prelayer": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                            },
+                            "uuid": "b21ea71a-07ee-4025-9b8b-50331878ec73",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                            "parentId": "6cd299d7-53dc-4113-a610-813d278c43ec"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/app.spec.js",
+                    "parentId": "8e248484-d6ac-4581-a4d4-7258b1a03990"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+            "uuid": "1388f273-4d5a-4d86-aac9-e4196a309f83",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/GiftItem.vue",
+                        "callee": "describe",
+                        "prelayer": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                    },
+                    "uuid": "8c65991f-f93d-4ab9-9d7c-14b12c1896bb",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "8c65991f-f93d-4ab9-9d7c-14b12c1896bb"
+                            },
+                            "uuid": "815f2edb-3107-4340-aa86-ef3f15e7d36a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "8c65991f-f93d-4ab9-9d7c-14b12c1896bb"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goDetailPage",
+                                "callee": "it",
+                                "prelayer": "8c65991f-f93d-4ab9-9d7c-14b12c1896bb"
+                            },
+                            "uuid": "2b552323-2028-4a20-90c6-65b16c40f545",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "8c65991f-f93d-4ab9-9d7c-14b12c1896bb"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                    "parentId": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/GiftItem.vue(珍贵礼物)",
+                        "callee": "describe",
+                        "prelayer": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                    },
+                    "uuid": "c73faa7b-896b-4d72-ad14-e5300174a478",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "c73faa7b-896b-4d72-ad14-e5300174a478"
+                            },
+                            "uuid": "3c7c6cd7-56e1-4660-9a0c-23cc5807376d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "c73faa7b-896b-4d72-ad14-e5300174a478"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                    "parentId": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/GiftItem.vue(珍贵礼物)",
+                        "callee": "describe",
+                        "prelayer": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                    },
+                    "uuid": "a0e62f03-f801-4d0e-92a3-5603726b9451",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "a0e62f03-f801-4d0e-92a3-5603726b9451"
+                            },
+                            "uuid": "89c4db55-ff12-404b-b08e-cdc1c301918d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "a0e62f03-f801-4d0e-92a3-5603726b9451"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                    "parentId": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/GiftItem.vue(稀有礼物)",
+                        "callee": "describe",
+                        "prelayer": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                    },
+                    "uuid": "1462be09-a3e4-453d-bfa6-74f4e8c121cd",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "1462be09-a3e4-453d-bfa6-74f4e8c121cd"
+                            },
+                            "uuid": "233c8269-4f47-4927-a17b-385bc84ed46b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "1462be09-a3e4-453d-bfa6-74f4e8c121cd"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                    "parentId": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test giftShelfv2/src/components/GiftItem.vue(限量礼物)",
+                        "callee": "describe",
+                        "prelayer": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                    },
+                    "uuid": "309cad20-7eaa-4ba7-8349-84f3c64f0dde",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "309cad20-7eaa-4ba7-8349-84f3c64f0dde"
+                            },
+                            "uuid": "820fbee7-8832-4ace-853b-ca0f9cd0472b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                            "parentId": "309cad20-7eaa-4ba7-8349-84f3c64f0dde"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftShelfv2/GiftItem.spec.js",
+                    "parentId": "1388f273-4d5a-4d86-aac9-e4196a309f83"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftUtil/calendar.spec.js",
+            "uuid": "47c78fdd-88b8-40ee-8067-fcd3275e9ef7",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test giftUtil/src/calendar.js",
+                        "callee": "describe",
+                        "prelayer": "47c78fdd-88b8-40ee-8067-fcd3275e9ef7"
+                    },
+                    "uuid": "b7d114ee-13e1-4252-905f-b6e584f8392d",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "getDateByMonth",
+                                "callee": "it",
+                                "prelayer": "b7d114ee-13e1-4252-905f-b6e584f8392d"
+                            },
+                            "uuid": "0a81c6c3-b54b-422e-b69f-3583ba70e07a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftUtil/calendar.spec.js",
+                            "parentId": "b7d114ee-13e1-4252-905f-b6e584f8392d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "getDateByMonth month with undefined",
+                                "callee": "it",
+                                "prelayer": "b7d114ee-13e1-4252-905f-b6e584f8392d"
+                            },
+                            "uuid": "2b25f6db-1b9d-40f6-86fc-5480953d941b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftUtil/calendar.spec.js",
+                            "parentId": "b7d114ee-13e1-4252-905f-b6e584f8392d"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftUtil/calendar.spec.js",
+                    "parentId": "47c78fdd-88b8-40ee-8067-fcd3275e9ef7"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+            "uuid": "5922a0ff-b925-453b-babe-b71510461809",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "test giftwall/src/api.js",
+                        "callee": "describe",
+                        "prelayer": "5922a0ff-b925-453b-babe-b71510461809"
+                    },
+                    "uuid": "7b79d5f5-f3ba-4436-b55a-13d863a09518",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "receive correct param",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "21255d28-52a4-48c8-b5b1-63016aa08aa2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "do handlerDataFun",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "864f27af-d002-4781-a7b4-3cdb6a93af1f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "errorCodeMap with -3000",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "3f2271e0-4628-49ad-bfbc-83d11f94361d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "errorCodeMap with -1002",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "2a4cf085-ea15-4d51-a852-f9fff6019fed",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "errorCodeMap with errormsg",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "d37de149-ebbf-4e85-8d24-099a3125e6d5",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "errorCodeMap with defaul msg",
+                                "callee": "it",
+                                "prelayer": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                            },
+                            "uuid": "c5506864-692f-4967-b915-f6cf76e5292a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                            "parentId": "7b79d5f5-f3ba-4436-b55a-13d863a09518"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/giftwall/api.spec.js",
+                    "parentId": "5922a0ff-b925-453b-babe-b71510461809"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+            "uuid": "9407f8b1-df14-4a3c-af8c-b8a62bab467e",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test history/src/app.js",
+                        "callee": "describe",
+                        "prelayer": "9407f8b1-df14-4a3c-af8c-b8a62bab467e"
+                    },
+                    "uuid": "becff411-b442-4074-8d57-dba5890aeed9",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should adjustHeight to be 0 when no StatusBarHeight in UserAgent",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "0b183382-0edd-49a4-a608-1c43c999c450",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should default to show recv Tab",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "f605aed1-9495-412c-b075-1f3a57d3e58d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should not show welcome dialog by init state",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "ac25c78c-8675-49f7-881a-2222b6a56338",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should pop back page after back btn click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "328a6754-1b2a-4da8-8c93-b54c18629a20",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should goto wall theme after dress btn click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "67e50705-a606-467c-a531-4c6abf13bfc3",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should swicth to send tab (empty list) after send tab click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "d02c7a39-2fdf-4b55-b869-876e9b158978",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should swicth to send tab (multi gift) after send tab click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "7456e1a0-0648-489b-add7-6b63092322eb",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should swicth to bag tab (empty list) after bag tab click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "f732ba66-cc0a-4092-bea2-3cd1ab70471b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should goto gift detail after send gift click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "5293b4a9-00ef-4bd5-b0ac-de75917b26a0",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "should goto gift send detail after bag gift click",
+                                "callee": "it",
+                                "prelayer": "becff411-b442-4074-8d57-dba5890aeed9"
+                            },
+                            "uuid": "a30d7ce0-db10-45c8-9085-bef53ff5a522",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                            "parentId": "becff411-b442-4074-8d57-dba5890aeed9"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/history/app.spec.js",
+                    "parentId": "9407f8b1-df14-4a3c-af8c-b8a62bab467e"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FixBottomBtn.spec.js",
+            "uuid": "8cd158f3-7f0f-4e46-8ec2-f91a9392d7bd",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/FixBottomBtn.vue",
+                        "callee": "describe",
+                        "prelayer": "8cd158f3-7f0f-4e46-8ec2-f91a9392d7bd"
+                    },
+                    "uuid": "eab0d6bf-b711-402d-b305-cf56cef3ed8a",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "单按钮",
+                                "callee": "it",
+                                "prelayer": "eab0d6bf-b711-402d-b305-cf56cef3ed8a"
+                            },
+                            "uuid": "13899e69-d894-451d-9d14-70aaa57c58a2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FixBottomBtn.spec.js",
+                            "parentId": "eab0d6bf-b711-402d-b305-cf56cef3ed8a"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "双按钮",
+                                "callee": "it",
+                                "prelayer": "eab0d6bf-b711-402d-b305-cf56cef3ed8a"
+                            },
+                            "uuid": "5d7ce602-e193-4379-a03f-b79d6539df6a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FixBottomBtn.spec.js",
+                            "parentId": "eab0d6bf-b711-402d-b305-cf56cef3ed8a"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FixBottomBtn.spec.js",
+                    "parentId": "8cd158f3-7f0f-4e46-8ec2-f91a9392d7bd"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+            "uuid": "af7e2aba-25e2-4fb9-8129-a2cddc7b5d0f",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/FriendChoose.vue (锁定模式)",
+                        "callee": "describe",
+                        "prelayer": "af7e2aba-25e2-4fb9-8129-a2cddc7b5d0f"
+                    },
+                    "uuid": "65bdcad7-2c2d-44f0-90fe-b72269270f85",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "初始化",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "f88ffd58-51a8-43b1-95ee-581446c1d4c2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "点击文字区域，clickTextArea函数触发，调用客户端键盘",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "e12c7128-c9e6-4de6-93bb-daa42c4cb8ec",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "anonymousChanged 无响应，出提示",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "90b80523-9e02-488f-b5ba-9f5add8a3d33",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "selectTime 无响应，出提示",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "e14cb523-be76-45ed-bec8-d21326f4352e",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "formData 调用",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "f7793fdb-669c-4808-9699-73e2dd375a07",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "formData 调用",
+                                "callee": "it",
+                                "prelayer": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                            },
+                            "uuid": "ed229ed6-b01d-48b1-b0bf-236e4fb1312e",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "65bdcad7-2c2d-44f0-90fe-b72269270f85"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                    "parentId": "af7e2aba-25e2-4fb9-8129-a2cddc7b5d0f"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/FriendChoose.vue (非锁定模式)",
+                        "callee": "describe",
+                        "prelayer": "af7e2aba-25e2-4fb9-8129-a2cddc7b5d0f"
+                    },
+                    "uuid": "d2dfb96d-05d0-4285-8af5-0caef79d4350",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "初始化",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "ef7cf5f3-becd-4b9e-8f1f-845c36c8e026",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "点击文字区域，clickTextArea函数触发，调用客户端键盘",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "380a4e90-facb-4aee-a549-892b95d78ab4",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "anonymousChanged 无响应，出提示",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "d98b9bd7-c751-4879-a113-7b6f3af05c0e",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "selectTime 触发",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "76b54038-d3e4-4f00-99bb-7825be58f7ac",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "formData 调用",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "428cb09e-5040-4355-a543-e0d76d5d2631",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "qzone 独立版 选择好友",
+                                "callee": "it",
+                                "prelayer": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                            },
+                            "uuid": "cf409a7d-948b-444f-89ba-507b36a9c3cd",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                            "parentId": "d2dfb96d-05d0-4285-8af5-0caef79d4350"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/FriendChoose.spec.js",
+                    "parentId": "af7e2aba-25e2-4fb9-8129-a2cddc7b5d0f"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+            "uuid": "77051891-0021-4e53-bfe9-1aad92c66c4d",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "callee": "describe",
+                        "prelayer": "77051891-0021-4e53-bfe9-1aad92c66c4d"
+                    },
+                    "uuid": "b3e7d4c3-5c58-43df-95da-16c0a9f05248",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "初始化",
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "130cb046-5e33-48a9-8b18-73444dd340de",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "c555f89d-567f-4751-9ee9-ca25125c1a25",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "7aac972b-e8cf-47f6-8740-bbf0b33fee38",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "33b4dda9-e775-4571-81db-4f9095810041",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "386ae119-d3fb-4579-9b48-beb35882406f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "0eecee5c-90ca-4e72-8bb7-6f55ffc85823",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "b58f2bea-203f-43c4-85a7-9d3dc9503c83",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "2cca0f2f-899b-4cd6-9b3a-119a06e1eedc",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "fcbd6054-6751-4c50-b512-f58fa122e778",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "e9b70cce-70f7-4007-be6e-03c67d7e82b6",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "400a6349-27b0-4e1b-89cc-fc2f26a4359f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "57c9d830-fb41-486f-bd1b-62e4baf7d3fa",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "callee": "it",
+                                "prelayer": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                            },
+                            "uuid": "16019765-7a22-463a-aa66-9043c5b049ee",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                            "parentId": "b3e7d4c3-5c58-43df-95da-16c0a9f05248"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftItem.spec.js",
+                    "parentId": "77051891-0021-4e53-bfe9-1aad92c66c4d"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+            "uuid": "bc0dd672-b03c-48c8-971a-b77ef6f39c82",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/pages/GiftRecvPage.vue",
+                        "callee": "describe",
+                        "prelayer": "bc0dd672-b03c-48c8-971a-b77ef6f39c82"
+                    },
+                    "uuid": "618bcf7e-e863-433d-bb83-10180921ba9e",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "1af6fa62-dda1-4980-81e3-42a020ffe203",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getVal",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "ef6886a7-57c1-40e7-9294-e9d055ca21bd",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getPicFail",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "5e43ef1a-002b-4c25-97ce-aa08515d2736",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method setImgLoading",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "640953fb-3621-4e52-8e5c-8ef2c613610f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method loadSourceStart",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "08e61ead-1c94-421d-9efd-5c0503961884",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method loadSourceEnd",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "ba7c41b1-7ad7-46c2-852b-4f9198983082",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method popAnimationFinish",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "f2b5c997-69c6-4886-bcdb-ecb8537d1ee1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method closeDecoShow",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "d433bb12-f58a-419b-afdf-3348adb6f71a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method share",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "ef592114-bb11-4c61-b0dd-b52fcfcdc5f0",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "8e27ec97-70a7-4503-8e59-d544ecfee58b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method leaveWord",
+                                "callee": "it",
+                                "prelayer": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                            },
+                            "uuid": "cd6254ce-a377-4014-8812-68d54c0a49ff",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                            "parentId": "618bcf7e-e863-433d-bb83-10180921ba9e"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftRecvPage.spec.js",
+                    "parentId": "bc0dd672-b03c-48c8-971a-b77ef6f39c82"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+            "uuid": "7d19d79a-3e51-4e4d-9702-63baa1b6cc90",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/pages/GiftSendPage.vue",
+                        "callee": "describe",
+                        "prelayer": "7d19d79a-3e51-4e4d-9702-63baa1b6cc90"
+                    },
+                    "uuid": "35bd297d-551c-40b4-843b-06e706dce3a5",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method wishDescChange",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "a0b71cba-720b-4637-87fb-543173a25d1f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method payRedPocketSucc",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "084a3d08-02c0-4f59-91b3-10d80d3afa47",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method revokeRedPocket",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "641be3e6-8e8e-4186-b2c7-b7566decb25b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method loadSourceStart",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "3615218b-fbb2-4045-8447-9956df40a4fd",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method loadSourceEnd",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "1b8e6cd3-e4f0-415c-9358-ca2d782db458",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method popAnimationFinish",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "04ace0ee-b01c-4eab-a44f-4743601a4606",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method receiverChanged(one)",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "295fe8d6-3d18-47a5-b624-20e543d5c3dc",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method receiverChanged(muti)",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "30d21ede-e652-4c93-b09d-7c95e8e6ae81",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method anonymousChanged",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "2efc019c-e666-4b7a-b282-008f793f1cbe",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendTimeChanged",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "cec26860-68a2-4e7c-aedf-b86fb532c638",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method btnClick with ad btnInfo",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "acca95cf-9738-4118-a1a4-eb759b5f7e63",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method btnClick with no ad btnInfo",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "3b4b3ca6-dc79-46b1-9714-1a2b240c335b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method watchAd",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "c08f20eb-1bec-4f06-baf3-889c0b031423",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method watchAd with no friends choosed",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "d3d087b5-8dc1-4ad0-a378-5e6867eb5272",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift with no friends choosed",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "fb713901-600a-4fe3-b849-c66f6806409f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift with paying state",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "99b07699-93e8-4f03-8397-a962537342a0",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift with friend choosed",
+                                "callee": "it",
+                                "prelayer": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                            },
+                            "uuid": "5fce8504-7eeb-4a52-8b36-14c33fa4d410",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                            "parentId": "35bd297d-551c-40b4-843b-06e706dce3a5"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/GiftSendPage.spec.js",
+                    "parentId": "7d19d79a-3e51-4e4d-9702-63baa1b6cc90"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+            "uuid": "15e91807-7fa6-4631-b68f-3414f6f3fc35",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/MoneyInput.vue",
+                        "callee": "describe",
+                        "prelayer": "15e91807-7fa6-4631-b68f-3414f6f3fc35"
+                    },
+                    "uuid": "1f82e5f3-8806-4d52-8a57-213f27b9974f",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                            },
+                            "uuid": "5239c4c7-4004-44f9-ae17-440bc487d54f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                            "parentId": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method stopClick",
+                                "callee": "it",
+                                "prelayer": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                            },
+                            "uuid": "1e5c13e5-9988-48a1-8c90-009b14249e05",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                            "parentId": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method submit",
+                                "callee": "it",
+                                "prelayer": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                            },
+                            "uuid": "f00196a0-5421-4c2f-bd38-5111f9618052",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                            "parentId": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method input",
+                                "callee": "it",
+                                "prelayer": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                            },
+                            "uuid": "93d45720-8585-49ee-873d-61152ef136d7",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                            "parentId": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method cancel",
+                                "callee": "it",
+                                "prelayer": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                            },
+                            "uuid": "7147a578-e63c-4ea5-ab29-18b3c979b44d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                            "parentId": "1f82e5f3-8806-4d52-8a57-213f27b9974f"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/MoneyInput.spec.js",
+                    "parentId": "15e91807-7fa6-4631-b68f-3414f6f3fc35"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvAnimation.spec.js",
+            "uuid": "bdcbccea-1668-4758-8071-48c0135f232c",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/recvAnimation.vue",
+                        "callee": "describe",
+                        "prelayer": "bdcbccea-1668-4758-8071-48c0135f232c"
+                    },
+                    "uuid": "d2700420-0285-4ab0-a9fa-952be7690227",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "d2700420-0285-4ab0-a9fa-952be7690227"
+                            },
+                            "uuid": "6136c455-6918-4d86-b829-bb475e5ded6b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvAnimation.spec.js",
+                            "parentId": "d2700420-0285-4ab0-a9fa-952be7690227"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method ifSupportWbgl",
+                                "callee": "it",
+                                "prelayer": "d2700420-0285-4ab0-a9fa-952be7690227"
+                            },
+                            "uuid": "9c19ecca-f578-4196-8279-c527eeb7b7ff",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvAnimation.spec.js",
+                            "parentId": "d2700420-0285-4ab0-a9fa-952be7690227"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvAnimation.spec.js",
+                    "parentId": "bdcbccea-1668-4758-8071-48c0135f232c"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvInfo.spec.js",
+            "uuid": "a4c76604-9a9b-4e88-ae38-301741085334",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/RecvInfo.vue",
+                        "callee": "describe",
+                        "prelayer": "a4c76604-9a9b-4e88-ae38-301741085334"
+                    },
+                    "uuid": "7f3e414b-8caa-41ca-8148-7ac76c05bbac",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "7f3e414b-8caa-41ca-8148-7ac76c05bbac"
+                            },
+                            "uuid": "0d0e92b1-dea6-43fd-9814-770fa5d69676",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvInfo.spec.js",
+                            "parentId": "7f3e414b-8caa-41ca-8148-7ac76c05bbac"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getFormDate",
+                                "callee": "it",
+                                "prelayer": "7f3e414b-8caa-41ca-8148-7ac76c05bbac"
+                            },
+                            "uuid": "adbd66b5-c0dc-4564-a364-294e388c431b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvInfo.spec.js",
+                            "parentId": "7f3e414b-8caa-41ca-8148-7ac76c05bbac"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/RecvInfo.spec.js",
+                    "parentId": "a4c76604-9a9b-4e88-ae38-301741085334"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+            "uuid": "ab0a0dc9-544e-427b-9d26-848887f64a50",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/sendAnimation.vue",
+                        "callee": "describe",
+                        "prelayer": "ab0a0dc9-544e-427b-9d26-848887f64a50"
+                    },
+                    "uuid": "718ad0af-2dc0-4fb8-82f0-16a733dadd55",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                            },
+                            "uuid": "8384e920-6fdc-4637-ae47-d6d185c07492",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+                            "parentId": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method ifSupportWbgl",
+                                "callee": "it",
+                                "prelayer": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                            },
+                            "uuid": "cac5aaf6-d81c-4a48-829a-84e02a1fc540",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+                            "parentId": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method afterGiftAnimation",
+                                "callee": "it",
+                                "prelayer": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                            },
+                            "uuid": "08c8a7cb-4cea-4a70-9097-3c01059fe668",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+                            "parentId": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method afterGiftAnimation without props popText",
+                                "callee": "it",
+                                "prelayer": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                            },
+                            "uuid": "d0c797a7-04e1-4ff9-b051-5df914dffb5c",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+                            "parentId": "718ad0af-2dc0-4fb8-82f0-16a733dadd55"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SendAnimation.spec.js",
+                    "parentId": "ab0a0dc9-544e-427b-9d26-848887f64a50"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+            "uuid": "c814ef18-06ce-4995-a8d4-515286e07d45",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/SharePop.vue",
+                        "callee": "describe",
+                        "prelayer": "c814ef18-06ce-4995-a8d4-515286e07d45"
+                    },
+                    "uuid": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "60e974d8-45c3-41d9-8854-05a345ad2d78",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method close",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "ff795558-3c51-48ff-a3d3-741640b5eeae",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getPic",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "9d6459c0-f63d-430d-bdd1-67d8a7ddb891",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getPuppeteer succ",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "121e3172-f9a8-4210-a0cd-587d9b7ff58f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getImgUrl",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "b46cde2d-1f50-4142-9c13-f06655cfcf96",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method shareToFeed",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "f120375f-fc73-4f88-8263-662394bd6360",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method shareImgToQzoneV2",
+                                "callee": "it",
+                                "prelayer": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                            },
+                            "uuid": "0cd6a903-fe72-4c64-9cf6-53df101593ed",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                            "parentId": "e0fa5fe5-2ef5-4d40-bd3a-f9d81a00acc7"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/SharePop.spec.js",
+                    "parentId": "c814ef18-06ce-4995-a8d4-515286e07d45"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+            "uuid": "022ebe12-4458-4075-9d14-7edfbfdec16d",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/StatusBar.vue",
+                        "callee": "describe",
+                        "prelayer": "022ebe12-4458-4075-9d14-7edfbfdec16d"
+                    },
+                    "uuid": "7bcb999b-be16-4a7e-ac5a-e8221f3c5c48",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render with props",
+                                "callee": "it",
+                                "prelayer": "7bcb999b-be16-4a7e-ac5a-e8221f3c5c48"
+                            },
+                            "uuid": "406ba207-e552-45c0-bfef-a3b463484939",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+                            "parentId": "7bcb999b-be16-4a7e-ac5a-e8221f3c5c48"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render without props",
+                                "callee": "it",
+                                "prelayer": "7bcb999b-be16-4a7e-ac5a-e8221f3c5c48"
+                            },
+                            "uuid": "e54833ce-29f2-47dc-a908-79ebfcf351cc",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+                            "parentId": "7bcb999b-be16-4a7e-ac5a-e8221f3c5c48"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+                    "parentId": "022ebe12-4458-4075-9d14-7edfbfdec16d"
+                },
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test newDev/components/StatusBar.vue",
+                        "callee": "describe",
+                        "prelayer": "022ebe12-4458-4075-9d14-7edfbfdec16d"
+                    },
+                    "uuid": "15eba16a-689b-4014-ad02-1513beb3f52b",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "render with props",
+                                "callee": "it",
+                                "prelayer": "15eba16a-689b-4014-ad02-1513beb3f52b"
+                            },
+                            "uuid": "f1e636e5-de8c-42b0-b7ca-74579ffefc91",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+                            "parentId": "15eba16a-689b-4014-ad02-1513beb3f52b"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/newDev/StatusBar.spec.js",
+                    "parentId": "022ebe12-4458-4075-9d14-7edfbfdec16d"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+            "uuid": "7ec5b664-ed01-4db9-a4e2-2a3966e4a66e",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test /sendGiftDialog/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "7ec5b664-ed01-4db9-a4e2-2a3966e4a66e"
+                    },
+                    "uuid": "e5acc960-d79e-41ac-a34d-ec9198487d65",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "c4f33f26-cc58-474f-b5a4-9127ef959759",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method changeGift",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "110c4499-447b-42c3-b13a-ded2b4063cdb",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method closeDialog",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "4d8d9f5b-4305-4ade-8de9-1deb284cbdc1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goGiftMall",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "d317918a-848e-4dcc-95e0-ef33f635f189",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift succ",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "56676ae6-cee3-4aca-8471-22c35cc70381",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift fail",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "7410cbc7-5166-4d00-be0e-1fa184f5548f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method watchAd",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "81e14e5d-1b72-4275-8821-727e989e7b4f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method watchAd (has finished)",
+                                "callee": "it",
+                                "prelayer": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                            },
+                            "uuid": "c2657aad-53ec-4e9f-a3c9-9a69916d940c",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                            "parentId": "e5acc960-d79e-41ac-a34d-ec9198487d65"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/app.spec.js",
+                    "parentId": "7ec5b664-ed01-4db9-a4e2-2a3966e4a66e"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/GiftItem.spec.js",
+            "uuid": "91fb10cd-11cb-4d21-aa93-718574170089",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test sendGiftDialog/src/components/GiftItem.vue",
+                        "callee": "describe",
+                        "prelayer": "91fb10cd-11cb-4d21-aa93-718574170089"
+                    },
+                    "uuid": "b299f74b-762d-466c-9a63-1db932f0ff14",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "b299f74b-762d-466c-9a63-1db932f0ff14"
+                            },
+                            "uuid": "e0ad48f9-830b-4b78-8a14-fc838e55f44d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/GiftItem.spec.js",
+                            "parentId": "b299f74b-762d-466c-9a63-1db932f0ff14"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method changeGift",
+                                "callee": "it",
+                                "prelayer": "b299f74b-762d-466c-9a63-1db932f0ff14"
+                            },
+                            "uuid": "6e334c92-36c3-4ddd-8a85-6e68fe322231",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/GiftItem.spec.js",
+                            "parentId": "b299f74b-762d-466c-9a63-1db932f0ff14"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/sendGiftDialog/GiftItem.spec.js",
+                    "parentId": "91fb10cd-11cb-4d21-aa93-718574170089"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/singleGiftHistory/app.spec.js",
+            "uuid": "4657501a-a4b3-45a0-9d43-dea82967d533",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test /singleGiftHistory/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "4657501a-a4b3-45a0-9d43-dea82967d533"
+                    },
+                    "uuid": "c736c109-0371-4f85-b5b6-1bc872a0d3e4",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method changeEnabled",
+                                "callee": "it",
+                                "prelayer": "c736c109-0371-4f85-b5b6-1bc872a0d3e4"
+                            },
+                            "uuid": "8c1c26eb-d0cd-4fa9-a655-4bbe9f371e1f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/singleGiftHistory/app.spec.js",
+                            "parentId": "c736c109-0371-4f85-b5b6-1bc872a0d3e4"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method goRecivePage",
+                                "callee": "it",
+                                "prelayer": "c736c109-0371-4f85-b5b6-1bc872a0d3e4"
+                            },
+                            "uuid": "27eb9c2e-dd39-440e-a8bc-8bcf3e8268a1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/singleGiftHistory/app.spec.js",
+                            "parentId": "c736c109-0371-4f85-b5b6-1bc872a0d3e4"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/singleGiftHistory/app.spec.js",
+                    "parentId": "4657501a-a4b3-45a0-9d43-dea82967d533"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+            "uuid": "3f42aeec-1946-49cd-831b-670871b91df0",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test /star_bri/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "3f42aeec-1946-49cd-831b-670871b91df0"
+                    },
+                    "uuid": "76456255-7e42-4ea1-bb3b-32487fa4978c",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method isEXpire",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "d28a3790-7f8a-4f8a-96c4-cb62288bdcd8",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getStarsInfo (succ)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "f37a437d-cb11-4859-b7a8-accf2b3f2b82",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getStarsInfo (fail)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "000453cd-9954-4228-9738-430446fae543",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift (fail)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "181a9edc-a0d3-4fe6-b7e2-c7cfb204a4ac",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method sendGift (SUCC)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "e3c589aa-129b-4deb-85f7-c34ed240ccb2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getGiftsInfo (succ)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "1b10a422-589c-4cb1-a759-23e78e52e8bc",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getGiftsInfo (fail)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "ae477996-c75e-4b45-9b51-e540c33b3de5",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method formatDate",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "fc75605d-c314-4981-bb3c-7932c846ebf2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method bugGift (下单失败)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "b5ca0e36-6f94-472f-909f-385195635b33",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method bugGift (下单成功)",
+                                "callee": "it",
+                                "prelayer": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                            },
+                            "uuid": "caa94cba-2986-40cf-84a5-f1967027d1c3",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                            "parentId": "76456255-7e42-4ea1-bb3b-32487fa4978c"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/star_bri/app.spec.js",
+                    "parentId": "3f42aeec-1946-49cd-831b-670871b91df0"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+            "uuid": "010f20a3-42ee-45c0-b6fd-7ce90b83245f",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "vuemallV2/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "010f20a3-42ee-45c0-b6fd-7ce90b83245f"
+                    },
+                    "uuid": "489af808-81d3-40a7-9301-705c2eee8521",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "正常直出,无Qboss广告",
+                                "callee": "describe",
+                                "prelayer": "489af808-81d3-40a7-9301-705c2eee8521"
+                            },
+                            "uuid": "f85ef501-96b7-46b0-9d45-2522a28d8b27",
+                            "children": [
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "页面正文正常渲染",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "3aec3e34-5033-450e-b235-4c8761e8939e",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "好友列表正常渲染",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "e1cbd06e-3187-4689-b068-e5b3d36b4db2",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "正常渲染首屏20个礼物",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "16b229ba-4aa8-4a4e-be19-fb04a07e3782",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "动态渲染更多礼物",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "53a04fe7-ec9e-411e-b5c2-3aa62bd41f88",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "点击礼物",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "b28c9bb2-7794-40c3-8b8b-97d2150ae3c3",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "选择好友",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "043b3aa6-8fa1-4520-a137-6e37b0526045",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "切换Tab",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "e5f78d66-d8ab-4524-8bb6-3bff9fe27432",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "去礼物页",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "4f1f4ad8-ab46-42bc-b037-5cee3d69e1bf",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "去礼物排行周榜",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "7495ac7e-97ee-41c9-9c08-1ca3638724c3",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                },
+                                {
+                                    "comment": {},
+                                    "nodeInfo": {
+                                        "describe": "添加自己",
+                                        "callee": "it",
+                                        "prelayer": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                    },
+                                    "uuid": "6861a5ee-ef2b-4461-bb0e-946cddfaf157",
+                                    "children": [],
+                                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                                    "parentId": "f85ef501-96b7-46b0-9d45-2522a28d8b27"
+                                }
+                            ],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                            "parentId": "489af808-81d3-40a7-9301-705c2eee8521"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/app.spec.js",
+                    "parentId": "010f20a3-42ee-45c0-b6fd-7ce90b83245f"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+            "uuid": "7287252a-26e7-4e29-9c50-65bee25d1edb",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "vuemallV2/src/components/GiftItem.vue",
+                        "callee": "describe",
+                        "prelayer": "7287252a-26e7-4e29-9c50-65bee25d1edb"
+                    },
+                    "uuid": "34a33611-881d-487c-ad4d-f083be22473b",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "34a33611-881d-487c-ad4d-f083be22473b"
+                            },
+                            "uuid": "814b22aa-4cf4-46c8-acfb-a402cbc85247",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+                            "parentId": "34a33611-881d-487c-ad4d-f083be22473b"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "Dom结构正常渲染",
+                                "callee": "it",
+                                "prelayer": "34a33611-881d-487c-ad4d-f083be22473b"
+                            },
+                            "uuid": "32022173-0556-4471-a5c4-388bdca5f73d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+                            "parentId": "34a33611-881d-487c-ad4d-f083be22473b"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "计算priceText",
+                                "callee": "it",
+                                "prelayer": "34a33611-881d-487c-ad4d-f083be22473b"
+                            },
+                            "uuid": "4d856d36-c759-46bf-8359-221df8300749",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+                            "parentId": "34a33611-881d-487c-ad4d-f083be22473b"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "34a33611-881d-487c-ad4d-f083be22473b"
+                            },
+                            "uuid": "90e742c8-82ff-4635-ad72-995f15525691",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+                            "parentId": "34a33611-881d-487c-ad4d-f083be22473b"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftItem.spec.js",
+                    "parentId": "7287252a-26e7-4e29-9c50-65bee25d1edb"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+            "uuid": "860489fb-6624-48fd-abf2-8dc50db18dae",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "vuemallV2/src/components/GiftList.vue",
+                        "callee": "describe",
+                        "prelayer": "860489fb-6624-48fd-abf2-8dc50db18dae"
+                    },
+                    "uuid": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                            },
+                            "uuid": "9e7e0679-83cd-4589-aa9c-d03fce2d5ddd",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+                            "parentId": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "正确渲染了2个奖品",
+                                "callee": "it",
+                                "prelayer": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                            },
+                            "uuid": "133436e8-c315-4b7d-8a40-c87d8eb67dc1",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+                            "parentId": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                            },
+                            "uuid": "89c43fb5-9849-4a9e-b676-6a8aeac6fe73",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+                            "parentId": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method topicClick",
+                                "callee": "it",
+                                "prelayer": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                            },
+                            "uuid": "a65db372-5583-49d1-845f-fbfdd4f59951",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+                            "parentId": "c6ac761a-76cf-4cbf-aa5a-51ab6f280f2c"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/GiftList.spec.js",
+                    "parentId": "860489fb-6624-48fd-abf2-8dc50db18dae"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/TopicBanner.spec.js",
+            "uuid": "f1fe9ca1-1ca4-4624-9bbb-90f24a0d6cfb",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "vuemallV2/src/components/TopicBanner.vue",
+                        "callee": "describe",
+                        "prelayer": "f1fe9ca1-1ca4-4624-9bbb-90f24a0d6cfb"
+                    },
+                    "uuid": "39a5bdee-502e-4856-b442-47c0230b0ae8",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                            },
+                            "uuid": "eec9c7ec-ed85-4e28-99dd-aeb8985ca7f6",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/TopicBanner.spec.js",
+                            "parentId": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "渲染Banner图片",
+                                "callee": "it",
+                                "prelayer": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                            },
+                            "uuid": "a4a58b7c-6e38-4364-b6f3-a62236ae1c9e",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/TopicBanner.spec.js",
+                            "parentId": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method topicClick",
+                                "callee": "it",
+                                "prelayer": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                            },
+                            "uuid": "bc76f2c3-46c5-4cee-8453-d2823a677074",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/TopicBanner.spec.js",
+                            "parentId": "39a5bdee-502e-4856-b442-47c0230b0ae8"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/vuemallV2/src/components/TopicBanner.spec.js",
+                    "parentId": "f1fe9ca1-1ca4-4624-9bbb-90f24a0d6cfb"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+            "uuid": "a4167c3c-04f4-4414-9a51-867220a6cd6c",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/home/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "a4167c3c-04f4-4414-9a51-867220a6cd6c"
+                    },
+                    "uuid": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                            },
+                            "uuid": "4e6c3d60-26a0-4781-9b2b-f49c3c853be9",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+                            "parentId": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method likeClick",
+                                "callee": "it",
+                                "prelayer": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                            },
+                            "uuid": "8c1882c4-d5b2-4fd9-aef1-a31ca4a8e109",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+                            "parentId": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method dressNow",
+                                "callee": "it",
+                                "prelayer": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                            },
+                            "uuid": "dc1345e7-3cb6-449f-927b-a9009cfc2815",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+                            "parentId": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method themeItemClick",
+                                "callee": "it",
+                                "prelayer": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                            },
+                            "uuid": "222f4429-3b4c-49c3-81db-1f7c6a636226",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+                            "parentId": "8a277e4d-ff31-42a9-b4ad-cfd0b9177af1"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.app.spec.js",
+                    "parentId": "a4167c3c-04f4-4414-9a51-867220a6cd6c"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeItem.spec.js",
+            "uuid": "57449682-52f1-43d1-9f7d-0c2deec7652a",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/detail/src/components/ThemeItem.vue",
+                        "callee": "describe",
+                        "prelayer": "57449682-52f1-43d1-9f7d-0c2deec7652a"
+                    },
+                    "uuid": "e38ddcba-039b-4f4b-9ef2-4f5a253899eb",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "e38ddcba-039b-4f4b-9ef2-4f5a253899eb"
+                            },
+                            "uuid": "8bf2f0f7-b0d2-4263-aa4d-a83c458cbdad",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeItem.spec.js",
+                            "parentId": "e38ddcba-039b-4f4b-9ef2-4f5a253899eb"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "e38ddcba-039b-4f4b-9ef2-4f5a253899eb"
+                            },
+                            "uuid": "6fca8d38-6451-4cae-a086-0ea38def8132",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeItem.spec.js",
+                            "parentId": "e38ddcba-039b-4f4b-9ef2-4f5a253899eb"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeItem.spec.js",
+                    "parentId": "57449682-52f1-43d1-9f7d-0c2deec7652a"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeList.spec.js",
+            "uuid": "8e33a8ea-47a7-4061-a3a9-8047a9f51c23",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/detail/src/components/ThemeList.vue",
+                        "callee": "describe",
+                        "prelayer": "8e33a8ea-47a7-4061-a3a9-8047a9f51c23"
+                    },
+                    "uuid": "f8e99280-9525-4737-bbe8-113826d54ad9",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "f8e99280-9525-4737-bbe8-113826d54ad9"
+                            },
+                            "uuid": "997e20c4-12ff-4fc0-85d4-2b14f96934f2",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeList.spec.js",
+                            "parentId": "f8e99280-9525-4737-bbe8-113826d54ad9"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "f8e99280-9525-4737-bbe8-113826d54ad9"
+                            },
+                            "uuid": "27543438-2af0-47ca-83e8-7d20ab69ee17",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeList.spec.js",
+                            "parentId": "f8e99280-9525-4737-bbe8-113826d54ad9"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/detail.themeList.spec.js",
+                    "parentId": "8e33a8ea-47a7-4061-a3a9-8047a9f51c23"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.app.spec.js",
+            "uuid": "d7ed37c4-26c9-4036-ae72-fde78c192ca1",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/home/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "d7ed37c4-26c9-4036-ae72-fde78c192ca1"
+                    },
+                    "uuid": "5cb32be1-61f2-490a-861f-7138235593ec",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "5cb32be1-61f2-490a-861f-7138235593ec"
+                            },
+                            "uuid": "2db3ed32-563a-452f-a138-2d21d16c759d",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.app.spec.js",
+                            "parentId": "5cb32be1-61f2-490a-861f-7138235593ec"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method topBannerClick",
+                                "callee": "it",
+                                "prelayer": "5cb32be1-61f2-490a-861f-7138235593ec"
+                            },
+                            "uuid": "bca9d092-e193-4add-b32f-13dd0a87ec7f",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.app.spec.js",
+                            "parentId": "5cb32be1-61f2-490a-861f-7138235593ec"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method themeItemClick",
+                                "callee": "it",
+                                "prelayer": "5cb32be1-61f2-490a-861f-7138235593ec"
+                            },
+                            "uuid": "ddc9a8a5-6c50-40b7-96d7-3fd9591cc568",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.app.spec.js",
+                            "parentId": "5cb32be1-61f2-490a-861f-7138235593ec"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.app.spec.js",
+                    "parentId": "d7ed37c4-26c9-4036-ae72-fde78c192ca1"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeInfo.spec.js",
+            "uuid": "45c79fd3-0a88-44bd-a211-89cd5dafdead",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/home/src/components/themeInfo.vue",
+                        "callee": "describe",
+                        "prelayer": "45c79fd3-0a88-44bd-a211-89cd5dafdead"
+                    },
+                    "uuid": "e2afe8a2-4b92-4892-b25d-39aab3c0511c",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "e2afe8a2-4b92-4892-b25d-39aab3c0511c"
+                            },
+                            "uuid": "f3e8f9ab-1060-4b56-83f0-d66932cc2194",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeInfo.spec.js",
+                            "parentId": "e2afe8a2-4b92-4892-b25d-39aab3c0511c"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "e2afe8a2-4b92-4892-b25d-39aab3c0511c"
+                            },
+                            "uuid": "bf222c4b-2d72-411d-a0a9-97b78d5a12ea",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeInfo.spec.js",
+                            "parentId": "e2afe8a2-4b92-4892-b25d-39aab3c0511c"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeInfo.spec.js",
+                    "parentId": "45c79fd3-0a88-44bd-a211-89cd5dafdead"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeList.spec.js",
+            "uuid": "81bfc0b1-af98-4c1c-94c3-d8df8b0c21d4",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/home/src/components/ThemeList.vue",
+                        "callee": "describe",
+                        "prelayer": "81bfc0b1-af98-4c1c-94c3-d8df8b0c21d4"
+                    },
+                    "uuid": "2b8380c4-5d8f-4cb5-8c62-3f951c6cef30",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "2b8380c4-5d8f-4cb5-8c62-3f951c6cef30"
+                            },
+                            "uuid": "b874ec80-b419-4dbb-9f48-014f4fcea9da",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeList.spec.js",
+                            "parentId": "2b8380c4-5d8f-4cb5-8c62-3f951c6cef30"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "2b8380c4-5d8f-4cb5-8c62-3f951c6cef30"
+                            },
+                            "uuid": "29d52745-d233-4fdc-8035-24085c6bcb45",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeList.spec.js",
+                            "parentId": "2b8380c4-5d8f-4cb5-8c62-3f951c6cef30"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.themeList.spec.js",
+                    "parentId": "81bfc0b1-af98-4c1c-94c3-d8df8b0c21d4"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.topBanner.spec.js",
+            "uuid": "2382af1d-89fe-471c-a0de-7ed91d392660",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/home/src/components/TopBanner.vue",
+                        "callee": "describe",
+                        "prelayer": "2382af1d-89fe-471c-a0de-7ed91d392660"
+                    },
+                    "uuid": "889d2641-6efe-414b-a142-32fe1fd8d576",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "889d2641-6efe-414b-a142-32fe1fd8d576"
+                            },
+                            "uuid": "d3929e5d-b7ad-4cdc-8311-69559739ab71",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.topBanner.spec.js",
+                            "parentId": "889d2641-6efe-414b-a142-32fe1fd8d576"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "889d2641-6efe-414b-a142-32fe1fd8d576"
+                            },
+                            "uuid": "85eafc7e-126a-4315-91c0-62ef1adf0f1c",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.topBanner.spec.js",
+                            "parentId": "889d2641-6efe-414b-a142-32fe1fd8d576"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/home.topBanner.spec.js",
+                    "parentId": "2382af1d-89fe-471c-a0de-7ed91d392660"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+            "uuid": "2f482d4e-be3a-4237-a100-909954b0b3e8",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/mine/src/components/app.vue",
+                        "callee": "describe",
+                        "prelayer": "2f482d4e-be3a-4237-a100-909954b0b3e8"
+                    },
+                    "uuid": "465d9177-47d3-4bdf-83d5-501b5e3f955d",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "8cf40346-3b30-40d1-beb8-76b6895e4e63",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method getVal",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "021e6032-0380-40a4-bd3c-4d4154ae7091",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method likeClick",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "8e441ed2-04b4-41cd-baca-d8294116108c",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method themeItemClick",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "1f3c8930-ec29-4628-b99b-fdffa58e77f9",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method dressNow",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "d1ee41da-eb83-4eab-9a53-dd3e50a0ae9b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method switchTab",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "2ecf0de8-eb86-4dd5-ba7b-836124fffcef",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method updateUserInfo",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "9c35013b-3ee1-4d93-8fac-14d444b19a44",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method updateLikeCount",
+                                "callee": "it",
+                                "prelayer": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                            },
+                            "uuid": "2f6048bb-2ebf-4f34-aac2-42ce74bdaab5",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                            "parentId": "465d9177-47d3-4bdf-83d5-501b5e3f955d"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.app.spec.js",
+                    "parentId": "2f482d4e-be3a-4237-a100-909954b0b3e8"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeInfo.spec.js",
+            "uuid": "41d40b98-93e8-4ac0-8fbe-53d8896c9b5d",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/mine/src/components/ThemeInfo.vue",
+                        "callee": "describe",
+                        "prelayer": "41d40b98-93e8-4ac0-8fbe-53d8896c9b5d"
+                    },
+                    "uuid": "5babf69b-cea7-414d-bd12-42d4acce89c4",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "5babf69b-cea7-414d-bd12-42d4acce89c4"
+                            },
+                            "uuid": "9d313c73-afac-46fd-ae29-a0eeb0dc1d5a",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeInfo.spec.js",
+                            "parentId": "5babf69b-cea7-414d-bd12-42d4acce89c4"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method like",
+                                "callee": "it",
+                                "prelayer": "5babf69b-cea7-414d-bd12-42d4acce89c4"
+                            },
+                            "uuid": "4a5d2732-6406-4425-9de1-6fb2d85e3259",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeInfo.spec.js",
+                            "parentId": "5babf69b-cea7-414d-bd12-42d4acce89c4"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeInfo.spec.js",
+                    "parentId": "41d40b98-93e8-4ac0-8fbe-53d8896c9b5d"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeItem.spec.js",
+            "uuid": "01a9ebe6-c298-4704-b3ef-177f884b77e2",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/mine/src/components/ThemeItem.vue",
+                        "callee": "describe",
+                        "prelayer": "01a9ebe6-c298-4704-b3ef-177f884b77e2"
+                    },
+                    "uuid": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "mounted",
+                                "callee": "it",
+                                "prelayer": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                            },
+                            "uuid": "48202bab-2048-4c26-a1bd-16c47e2b154b",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeItem.spec.js",
+                            "parentId": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                            },
+                            "uuid": "d4037e3c-2693-4674-bb75-7bdebc259042",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeItem.spec.js",
+                            "parentId": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method dressNow",
+                                "callee": "it",
+                                "prelayer": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                            },
+                            "uuid": "2cd1ec49-b5ec-45e0-a91d-d4f7db3d85c4",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeItem.spec.js",
+                            "parentId": "a3537681-f15c-4a0e-a3e8-d709aecfb0a4"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeItem.spec.js",
+                    "parentId": "01a9ebe6-c298-4704-b3ef-177f884b77e2"
+                }
+            ],
+            "comment": {}
+        },
+        {
+            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeList.spec.js",
+            "uuid": "e8029e50-4570-4535-9818-e830e628a889",
+            "children": [
+                {
+                    "comment": {},
+                    "nodeInfo": {
+                        "describe": "Test wallThemeStore/mine/src/components/ThemeList.vue",
+                        "callee": "describe",
+                        "prelayer": "e8029e50-4570-4535-9818-e830e628a889"
+                    },
+                    "uuid": "f0a21bde-2f1b-4f44-99a6-cd332e136d0d",
+                    "children": [
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method itemClick",
+                                "callee": "it",
+                                "prelayer": "f0a21bde-2f1b-4f44-99a6-cd332e136d0d"
+                            },
+                            "uuid": "9208dd35-6366-4607-b921-1cd74ece95f4",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeList.spec.js",
+                            "parentId": "f0a21bde-2f1b-4f44-99a6-cd332e136d0d"
+                        },
+                        {
+                            "comment": {},
+                            "nodeInfo": {
+                                "describe": "test method dressNow",
+                                "callee": "it",
+                                "prelayer": "f0a21bde-2f1b-4f44-99a6-cd332e136d0d"
+                            },
+                            "uuid": "2fc51df6-c33f-4edc-a754-df6ce3449af3",
+                            "children": [],
+                            "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeList.spec.js",
+                            "parentId": "f0a21bde-2f1b-4f44-99a6-cd332e136d0d"
+                        }
+                    ],
+                    "fullFile": "/Users/helinjiang/gitprojects/gift-mall/test/unit/client/wallThemeStore/mine.themeList.spec.js",
+                    "parentId": "e8029e50-4570-4535-9818-e830e628a889"
+                }
+            ],
+            "comment": {}
+        }
+    ]
+}
